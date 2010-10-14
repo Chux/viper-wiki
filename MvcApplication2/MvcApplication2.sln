@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication2", "MvcApplication2\MvcApplication2.csproj", "{77A1F2BD-4851-48EB-A361-A3260BE53A14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "viper-wiki", "viper-wiki\viper-wiki.csproj", "{C21BC3AB-F2AC-41AA-9D12-F14CC5BDF054}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77A1F2BD-4851-48EB-A361-A3260BE53A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A1F2BD-4851-48EB-A361-A3260BE53A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A1F2BD-4851-48EB-A361-A3260BE53A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A1F2BD-4851-48EB-A361-A3260BE53A14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C21BC3AB-F2AC-41AA-9D12-F14CC5BDF054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21BC3AB-F2AC-41AA-9D12-F14CC5BDF054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21BC3AB-F2AC-41AA-9D12-F14CC5BDF054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21BC3AB-F2AC-41AA-9D12-F14CC5BDF054}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
