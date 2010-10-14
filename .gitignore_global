@@ -6,12 +6,14 @@
 *.xap
 _ReSharper.*  #Resharper database
 TestResults/   #MSTest result files
+*.pdb
 
 # Compiled source #
 ###################
 *.com
 *.class
 *.dll
+*.dll.config
 *.exe
 *.o
 *.so
