@@ -1,9 +1,11 @@
 /*/*.user           #User specific solution and project settings
 /*/*.suo
 /*/*.sln.cache
-/*/[bB]in/         #Build output
-/*/[oO]bj/
+[bB]in/
+[bB]in/*
+[oO]bj/
+[oO]bj/*
 /*/*.xap
 /*/_ReSharper.*  #Resharper database
-/*/TestResults/   #MSTest result files
+TestResults/   #MSTest result files
 /*/*.pdb
