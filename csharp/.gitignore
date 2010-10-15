@@ -1,8 +1,0 @@
-*.user           #User specific solution and project settings
-*.suo
-*.sln.cache
-[bB]in/         #Build output
-[oO]bj/
-*.xap
-_ReSharper.*  #Resharper database
-TestResults/   #MSTest result files
