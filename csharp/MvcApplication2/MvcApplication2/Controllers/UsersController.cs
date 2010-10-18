@@ -26,18 +26,19 @@ namespace MvcApplication2.Controllers
         {
 
             // Use a standard connection string
-            usersDataContext db = new usersDataContext();
+            UsersDataContext db = new UsersDataContext();
 
             // Get a typed table to run queries
-            System.Data.Linq.Table<user> users = db.users;
+            System.Data.Linq.Table<User> users = db.Users;
 
             var yay = from u in users select u;
 
-            List<user> enLista = yay.ToList();
+            List<User> enLista = yay.ToList(); 
+        
 
-            user enUser = enLista.First();
+            User enUser = enLista.First();
 
-            return enUser.name;
+            return enUser.username;
         }
 
     }

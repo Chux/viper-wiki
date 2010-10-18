@@ -73,17 +73,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\users.designer.cs">
+    <Compile Include="Models\Users.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>users.dbml</DependentUpon>
+      <DependentUpon>Users.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\viper-wiki.mdf" />
-    <Content Include="App_Data\viper-wiki_log.ldf">
-      <DependentUpon>viper-wiki.mdf</DependentUpon>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Views\Users\Index.aspx" />
@@ -122,15 +122,15 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\users.dbml">
+    <None Include="Models\Users.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>users.designer.cs</LastGenOutput>
+      <LastGenOutput>Users.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\users.dbml.layout">
-      <DependentUpon>users.dbml</DependentUpon>
+    <None Include="Models\Users.dbml.layout">
+      <DependentUpon>Users.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
