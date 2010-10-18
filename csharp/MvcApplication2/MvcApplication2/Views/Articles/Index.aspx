@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<MvcApplication2.Models.User>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<MvcApplication2.Models.Article>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Index
@@ -6,19 +6,19 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Users</h2>
+    <h2>Articles</h2>
 
     <table>
         <tr>
             <th></th>
             <th>
-                username
-            </th>
-            <th>
-                password
-            </th>
-            <th>
                 id
+            </th>
+            <th>
+                title
+            </th>
+            <th>
+                content
             </th>
         </tr>
 
@@ -31,13 +31,13 @@
                 <%: Html.ActionLink("Delete", "Delete", new { id=item.id })%>
             </td>
             <td>
-                <%: item.username %>
-            </td>
-            <td>
-                <%: item.password %>
-            </td>
-            <td>
                 <%: item.id %>
+            </td>
+            <td>
+                <%: item.title %>
+            </td>
+            <td>
+                <%: item.content %>
             </td>
         </tr>
     
