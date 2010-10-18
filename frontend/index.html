@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+	<!-- Frontend for Viper Wiki 1.0 -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Artikelnamn | Viper Wiki instans</title>
+		<link rel="stylesheet" type="text/css" href="layout.css">
+	</head>
+	<body>
+		<header>
+			<img id="logo" alt="Viper Wiki logo" src="logo.png">
+			<menu>
+				<li><a href="#">Menyval1</a></li>
+				<li><a href="#">Menyval2</a></li>
+				<li><a href="#">Menyval3</a></li>
+			</menu>
+			<!-- Form syns bara om man inte är inloggad, när man är inloggad kan väl en logga ut-länk läggas här -->
+			<form method="post">
+				<!-- Nya input typerna som kanske kommer i html5 är inte stödda av särskilt många browsers, så vi kör "gamla hederliga" -->
+				<input type="text" name="user_name">
+				<input type="text" name="user_password">
+				<input type="submit" name="user_login" value="Log in">
+			</form>
+		</header>
+		<article>
+			<header>
+				<!-- Den här menyn ska ju bara synas om man är inloggad -->
+				<menu>
+					<li><a href="#">Redigera artikel</a></li>
+					<li><a href="#">Diskussion/Kommentarer</a></li>
+					<li><a href="#">Nått mer?</a></li>
+				</menu>
+				<h1>Artikel-/Sid-namn</h1>
+			</header>
+
+			Här lägger vi content..!
+
+		</article>
+		<footer>
+			Här kan man ju skriva någonslags copyright notice 2010
+		</footer>
+	</body>
+</html>
