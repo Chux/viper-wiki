@@ -1,40 +1,39 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!-- Frontend for Viper Wiki 1.0 -->
+<html>
 <head runat="server">
+    <meta charset="utf-8" />
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/layout.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <div class="page">
+    <header>
+        <img id="logo" alt="Viper Wiki logo" src="../../Content/images/logo.png"> 
+  
+        <menu>              
+            <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
+            <li><%: Html.ActionLink("About", "About", "Home")%></li>
+            <li><%: Html.ActionLink("Users", "Index", "Users")%></li>
+        </menu>
+        
+        <asp:ContentPlaceHolder ID="LoginMenuContent" runat="server" />
 
-        <div id="header">
-            <div id="title">
-                <h1>My MVC Application</h1>
-            </div>
-              
-            <div id="logindisplay">
-                <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
-            
-            <div id="menucontainer">
-            
-                <ul id="menu">              
-                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("About", "About", "Home")%></li>
-                </ul>
-            
-            </div>
-        </div>
+    </header>
 
-        <div id="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <article>
+		<header>
+            <asp:ContentPlaceHolder ID="ArticleMenuContent" runat="server" />
+            <h1><asp:ContentPlaceHolder ID="MainHeaderContent" runat="server" /></h1>
+		</header>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </article>
 
-            <div id="footer">
-            </div>
-        </div>
-    </div>
+    <footer>
+        <asp:ContentPlaceHolder ID="FooterContent" runat="server" />
+    </footer>
+   
 </body>
 </html>
