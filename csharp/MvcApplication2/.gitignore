@@ -8,4 +8,5 @@
 /*/*.xap
 /*/_ReSharper.*  #Resharper database
 TestResults/   #MSTest result files
+TestResults/*   #MSTest result files
 /*/*.pdb
