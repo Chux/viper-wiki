@@ -1,5 +1,5 @@
 /*
-** Viper-Wiki frontend 1.0
+** Viper-Wiki frontend 1.1
 */
 
 body {
@@ -33,14 +33,14 @@ body>header img#logo {
 	width: 162px;
 	display: block;
 	float: left;
+	border: 0;
 }
 
 body>header>menu {
 	list-style: none;
 	margin: 0;
-	padding: 0;
-	float: left;
 	margin-top: 50px;
+	float: left;
 }
 
 
@@ -71,9 +71,41 @@ body>header>menu li a:hover, header>menu li a:focus {
 	text-shadow: 1px 1px 5px #ccc;
 }
 
-body>header>form {
-	float: right;
-	padding: 10px;
+body>header>form#search {
+	float: left;
+	margin-top: 45px;
+	padding-left: 50px;
+	line-height: 0;
+}
+
+body>header>form#search>input {
+	font-size: 16px;
+	padding: 0;
+	background-color: #CDDEA7;
+	border: 1px dashed #fff;
+	height: 24px;
+	margin: 0;
+}
+
+body>header>form#search>input#search_text {
+	padding-left: 5px;
+}
+
+body>header>form#search>input#search_submit {
+	border: 1px solid #fff;
+	height: 28px;
+	outline: 0;
+	color: #333;
+	font-size: 16px;
+	width: 70px;
+}
+body>header>form#search>input#search_submit:focus,
+body>header>form#search>input#search_submit:active {
+	background-color: #BCCD97;
+	border: 1px solid #CCC;
+	outline: 0;
+	color: #000;
+	font-size: 16px;
 }
 
 article>header>h1 {
