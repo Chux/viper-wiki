@@ -43,16 +43,3 @@
     </div>
 
 </asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="LoginMenuContent" runat="server">
-</asp:Content>
-
-<asp:Content ID="Content4" ContentPlaceHolderID="ArticleMenuContent" runat="server">
-</asp:Content>
-
-<asp:Content ID="Content5" ContentPlaceHolderID="MainHeaderContent" runat="server">
-</asp:Content>
-
-<asp:Content ID="Content6" ContentPlaceHolderID="FooterContent" runat="server">
-</asp:Content>
-

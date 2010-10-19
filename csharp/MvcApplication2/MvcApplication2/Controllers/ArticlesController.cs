@@ -42,15 +42,6 @@ namespace MvcApplication2.Controllers
         
         public ActionResult All()
         {
-            var db_start = from a in db.Articles
-                           where a.id == 6
-                           select a;
-
-            return View(db_start.ToList());
-        }
-        
-        public ActionResult Articles()
-        {
             var db_articles = from a in db.Articles
                               orderby a.datetime descending
                               select a;
