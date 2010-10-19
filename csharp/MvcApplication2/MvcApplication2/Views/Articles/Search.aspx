@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<MvcApplication2.Models.Article>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Search
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Index</h2>
+    <h2>Search</h2>
 
     <table>
         <tr>
@@ -48,16 +48,6 @@
     <p>
         <%: Html.ActionLink("Create New", "Create") %>
     </p>
-
-    <p>
-        <%: Html.ActionLink("See all articles", "Articles") %>
-    </p>
-
-    <form action="Articles/Search" method = "post">
-        <label>Search: </label>
-        <input type = "text" name = "search_article" />
-        <input type = "submit" />
-    </form>
 
 </asp:Content>
 
