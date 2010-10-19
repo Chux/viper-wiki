@@ -22,5 +22,27 @@ namespace MvcApplication2.Controllers
  
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(User newUser)
+        {
+
+            if (ModelState.IsValid)
+            {
+                db.AddToUsers(newUser);
+                db.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(newUser);
+            }
+        }
+
     }
 }
