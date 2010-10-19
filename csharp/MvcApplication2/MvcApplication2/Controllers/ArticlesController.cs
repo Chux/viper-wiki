@@ -17,7 +17,6 @@ namespace MvcApplication2.Controllers
         public ActionResult Index( string articletitle )
         {
             string tArticleContent;
-
             if (String.IsNullOrEmpty(articletitle))
             {
                 articletitle = "Start";
@@ -35,6 +34,13 @@ namespace MvcApplication2.Controllers
             ViewData["ArticleTitle"] = articletitle;
             ViewData["ArticleContent"] = tArticleContent;            
             return View();
+        }
+        
+        public ActionResult Articles()
+        {
+            var db_articles = from a in db.Articles
+                              orderby a.datetime descending
+                              select a;
         }
 
         public ActionResult Edit()
@@ -63,6 +69,29 @@ namespace MvcApplication2.Controllers
             {
                 return "";
             }
+        }
+
+
+        public ActionResult Search()
+        {
+            String s = Request.Form["search_article"].ToString();
+            var results = from res in db.Articles
+                          where res.title.Contains(s)
+                          || res.content.Contains(s)
+                          orderby res.title , res.content
+                          select res;
+
+            //var search_results = db.Articles.Search("Articles, s);
+                
+                
+                /*from tit in db.Articles
+                          join cont in db.Articles on tit.id equals cont.id
+                          where tit.title.Contains(s)
+                          && cont.content.Contains(s)
+                          orderby tit.title, cont.content
+                          select new { tit.title, cont.content };*/
+
+            return View(results.ToList());
         }
 
     }

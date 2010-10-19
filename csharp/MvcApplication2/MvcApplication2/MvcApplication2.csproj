@@ -98,7 +98,10 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Articles\Save.aspx" />
     <Content Include="Views\Articles\Edit.aspx" />
+    <Content Include="Views\Articles\Articles.aspx" />
     <Content Include="Views\Articles\Index.aspx" />
+    <Content Include="Views\Articles\Search.aspx" />
+    <Content Include="Views\Users\Create.aspx" />
     <Content Include="Views\Users\Index.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -136,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Models\Users.edmx">
@@ -149,7 +153,6 @@
       <LastGenOutput>Articles.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

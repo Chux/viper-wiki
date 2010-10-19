@@ -4,9 +4,9 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ArticlesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="ArticlesModelStoreContainer">
-          <EntitySet Name="Articles" EntityType="ArticlesModel.Store.Articles" store:Type="Tables" Schema="dbo" />
+      <Schema Namespace="Database1ModelArticles.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Database1ModelArticlesStoreContainer">
+          <EntitySet Name="Articles" EntityType="Database1ModelArticles.Store.Articles" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
         <EntityType Name="Articles">
           <Key>
@@ -21,9 +21,9 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ArticlesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Schema Namespace="Database1ModelArticles" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="ArticleEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Articles" EntityType="ArticlesModel.Article" />
+          <EntitySet Name="Articles" EntityType="Database1ModelArticles.Article" />
         </EntityContainer>
         <EntityType Name="Article">
           <Key>
@@ -39,8 +39,8 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ArticlesModelStoreContainer" CdmEntityContainer="ArticleEntities">
-          <EntitySetMapping Name="Articles"><EntityTypeMapping TypeName="ArticlesModel.Article"><MappingFragment StoreEntitySet="Articles">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelArticlesStoreContainer" CdmEntityContainer="ArticleEntities">
+          <EntitySetMapping Name="Articles"><EntityTypeMapping TypeName="Database1ModelArticles.Article"><MappingFragment StoreEntitySet="Articles">
             <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="title" ColumnName="title" />
             <ScalarProperty Name="content" ColumnName="content" />
@@ -67,7 +67,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="Articles">
-        <EntityTypeShape EntityType="ArticlesModel.Article" Width="1.5" PointX="0.75" PointY="0.75" Height="1.787985026041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1ModelArticles.Article" Width="1.5" PointX="0.75" PointY="0.75" Height="1.787985026041667" IsExpanded="true" />
       </Diagram>
     </Diagrams>
   </Designer>

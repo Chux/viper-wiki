@@ -103,7 +103,7 @@ namespace MvcApplication2.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="ArticlesModel", Name="Article")]
+    [EdmEntityTypeAttribute(NamespaceName="Database1ModelArticles", Name="Article")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Article : EntityObject
