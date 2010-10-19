@@ -16,8 +16,15 @@ namespace MvcApplication2
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
             routes.MapRoute(
                 "Articles", // Route name
+                "Articles/All", // URL with parameters
+                new { controller = "Articles", action = "All" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Articles/All", // Route name
                 "Articles/{articletitle}", // URL with parameters
                 new { controller = "Articles", action = "Index" } // Parameter defaults
             );

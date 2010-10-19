@@ -98,7 +98,7 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Articles\Save.aspx" />
     <Content Include="Views\Articles\Edit.aspx" />
-    <Content Include="Views\Articles\Articles.aspx" />
+    <Content Include="Views\Articles\All.aspx" />
     <Content Include="Views\Articles\Index.aspx" />
     <Content Include="Views\Articles\Search.aspx" />
     <Content Include="Views\Users\Create.aspx" />

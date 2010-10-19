@@ -24,6 +24,10 @@ namespace MvcApplication2.Controllers
             }
             else
             {
+                if (articletitle == "All")
+                {
+                    return Redirect( "All" );
+                }
                 tArticleContent = GetArticleContent(articletitle);
                 if (String.IsNullOrEmpty(GetArticleContent(articletitle)))
                 {
@@ -36,11 +40,12 @@ namespace MvcApplication2.Controllers
             return View();
         }
         
-        public ActionResult Articles()
+        public ActionResult All()
         {
             var db_articles = from a in db.Articles
                               orderby a.datetime descending
                               select a;
+            return View(db_articles.ToList());
         }
 
         public ActionResult Edit()
