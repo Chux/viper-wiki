@@ -24,9 +24,15 @@ namespace MvcApplication2
             );
 
             routes.MapRoute(
-                "Articles/All", // Route name
-                "Articles/{articletitle}", // URL with parameters
-                new { controller = "Articles", action = "Index" } // Parameter defaults
+                "Articles/Search", // Route name
+                "Articles/Search", // URL with parameters
+                new { controller = "Articles", action = "Search" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+              "Articles/All", // Route name
+              "Articles/{articletitle}", // URL with parameters
+              new { controller = "Articles", action = "Index" } // Parameter defaults
             );
 
             routes.MapRoute(
