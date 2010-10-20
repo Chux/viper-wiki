@@ -18,7 +18,7 @@
             <li><%: Html.ActionLink("Articles", "Index", "Articles")%></li>
         </menu>
         <asp:ContentPlaceHolder ID="SearchBarContent" runat="server" />
-			<form id="search" method="post"><!-- borde brytas ut så den hamnar i ContentPlaceHolder ovan -->
+			<form id="search" action="/Articles/Search" method="post"><!-- borde brytas ut så den hamnar i ContentPlaceHolder ovan -->
 				<input type="text" name="search_text" id="search_text">
 				<input type="submit" name="search_submit" id="search_submit" value="Seach">
 			</form>
