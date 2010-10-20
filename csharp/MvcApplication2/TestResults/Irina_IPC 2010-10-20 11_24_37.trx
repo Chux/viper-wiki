@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="5ea64a57-4b79-4fc7-85b4-9702b64da0bd" name="Irina@IPC 2010-10-20 11:24:37" runUser="IPC\Irina" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="f266f7c3-35d7-4545-b472-de89bb3b10bb">
+    <Deployment runDeploymentRoot="Irina_IPC 2010-10-20 11_24_37">
+      <DeploymentItem filename="C:\Users\Irina\Documents\VIPER\viper-wiki\csharp\MvcApplication2\MvcApplication2\bin\MvcApplication2.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-10-20T11:24:37.1688975+02:00" queuing="2010-10-20T11:24:39.1930132+02:00" start="2010-10-20T11:24:39.5480336+02:00" finish="2010-10-20T11:24:42.2601887+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="17" executed="17" passed="17" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ChangePassword_Post_ReturnsRedirectOnSuccess" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="5cba14b5-e5ee-c2b1-a06b-37bed6f93c4a">
+      <Execution id="5a39d7c5-b6e7-4cee-98f3-e23699c47695" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="293f5a52-3520-c72e-870f-9e93a0146d1c">
+      <Execution id="88ebe51d-c783-4378-a314-3239413a7048" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.HomeControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="5133da90-7b3c-2eda-4202-818db91a4da7">
+      <Execution id="b8cfe766-5fc3-4b22-accb-4c4acf5c8f44" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Get_ReturnsView" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="3078c832-02b5-87f6-9974-ff8aad357270">
+      <Execution id="a6ee8c08-b5db-45d8-8a6f-0fdb0ae757f4" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="bd3d8429-1fcc-7793-6a46-984fc66b3726">
+      <Execution id="6ef6fc60-686d-4ab8-a73c-4efd6e790905" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="ChangePasswordSuccess_ReturnsView" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="a06cb7d7-498c-063d-7c92-66bc6db7094d">
+      <Execution id="3cef6f4a-e244-42bf-a720-3f7f1394618e" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePasswordSuccess_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="5955a081-a4aa-b278-56a4-81adc5da6ec2">
+      <Execution id="e3f4760c-d945-4758-b190-6df316424b8c" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.HomeControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="75b078fc-0e35-02cc-62cb-6bdefd52e9ce">
+      <Execution id="ea9db0cc-c7aa-4056-bd2c-392ab0027732" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="LogOff_LogsOutAndRedirects" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="48e14721-341c-ae95-11e2-daadd4d2e741">
+      <Execution id="298c7884-e8c6-4acd-9fa1-077d0855627f" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOff_LogsOutAndRedirects" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfValidateUserFails" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="fba708a9-230b-45e8-d1df-8db936b1ed2c">
+      <Execution id="3f675b74-8fdd-466f-8126-9b92bb26b8e8" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfValidateUserFails" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="3e9bde5a-5e2d-9422-15e8-af1023d291ab">
+      <Execution id="b841ff4a-e715-46cb-9c00-493d5a2c5860" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="4fedca1c-ada7-dc12-c056-cf6eb6267a2e">
+      <Execution id="4d716121-dbbd-4f1e-828e-412a93273461" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" />
+    </UnitTest>
+    <UnitTest name="Register_Get_ReturnsView" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="3da2e4c1-4be7-53ca-b426-e442c1933d7d">
+      <Execution id="d59a9fec-4807-453b-86f5-18cc40909669" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfRegistrationFails" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="6c6a8725-b28a-439f-ffc1-ed926651f669">
+      <Execution id="e620a1a5-7549-41e1-9c4d-63d4302abd23" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfRegistrationFails" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsRedirectOnSuccess" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="7aa717d0-c707-ac55-cc57-5c1b5ca8b912">
+      <Execution id="01701fe7-fd34-4bb2-8c4a-88b4d3f7d3d1" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="d30e1d2f-e6cb-e291-81f0-8a714099b544">
+      <Execution id="3f6b595e-f56d-47c9-be20-a0bbb15a3fd6" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" />
+    </UnitTest>
+    <UnitTest name="LogOn_Get_ReturnsView" storage="c:\users\irina\documents\viper\viper-wiki\csharp\mvcapplication2\viper-wiki\bin\debug\viper-wiki.dll" id="be82c9eb-d59c-4732-8213-e027717f0ea1">
+      <Execution id="348fe44f-894a-45c7-8d8a-984829af8b0b" />
+      <TestMethod codeBase="C:/Users/Irina/Documents/VIPER/viper-wiki/csharp/MvcApplication2/viper-wiki/bin/Debug/viper-wiki.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="viper_wiki.Controllers.AccountControllerTest, viper-wiki, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Get_ReturnsView" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3078c832-02b5-87f6-9974-ff8aad357270" executionId="a6ee8c08-b5db-45d8-8a6f-0fdb0ae757f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5cba14b5-e5ee-c2b1-a06b-37bed6f93c4a" executionId="5a39d7c5-b6e7-4cee-98f3-e23699c47695" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d30e1d2f-e6cb-e291-81f0-8a714099b544" executionId="3f6b595e-f56d-47c9-be20-a0bbb15a3fd6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e9bde5a-5e2d-9422-15e8-af1023d291ab" executionId="b841ff4a-e715-46cb-9c00-493d5a2c5860" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a06cb7d7-498c-063d-7c92-66bc6db7094d" executionId="3cef6f4a-e244-42bf-a720-3f7f1394618e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48e14721-341c-ae95-11e2-daadd4d2e741" executionId="298c7884-e8c6-4acd-9fa1-077d0855627f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="be82c9eb-d59c-4732-8213-e027717f0ea1" executionId="348fe44f-894a-45c7-8d8a-984829af8b0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fedca1c-ada7-dc12-c056-cf6eb6267a2e" executionId="4d716121-dbbd-4f1e-828e-412a93273461" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5133da90-7b3c-2eda-4202-818db91a4da7" executionId="b8cfe766-5fc3-4b22-accb-4c4acf5c8f44" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75b078fc-0e35-02cc-62cb-6bdefd52e9ce" executionId="ea9db0cc-c7aa-4056-bd2c-392ab0027732" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fba708a9-230b-45e8-d1df-8db936b1ed2c" executionId="3f675b74-8fdd-466f-8126-9b92bb26b8e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3da2e4c1-4be7-53ca-b426-e442c1933d7d" executionId="d59a9fec-4807-453b-86f5-18cc40909669" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7aa717d0-c707-ac55-cc57-5c1b5ca8b912" executionId="01701fe7-fd34-4bb2-8c4a-88b4d3f7d3d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c6a8725-b28a-439f-ffc1-ed926651f669" executionId="e620a1a5-7549-41e1-9c4d-63d4302abd23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd3d8429-1fcc-7793-6a46-984fc66b3726" executionId="6ef6fc60-686d-4ab8-a73c-4efd6e790905" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="293f5a52-3520-c72e-870f-9e93a0146d1c" executionId="88ebe51d-c783-4378-a314-3239413a7048" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5955a081-a4aa-b278-56a4-81adc5da6ec2" executionId="e3f4760c-d945-4758-b190-6df316424b8c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a6ee8c08-b5db-45d8-8a6f-0fdb0ae757f4" testId="3078c832-02b5-87f6-9974-ff8aad357270" testName="ChangePassword_Get_ReturnsView" computerName="IPC" duration="00:00:00.0507850" startTime="2010-10-20T11:24:39.8790525+02:00" endTime="2010-10-20T11:24:40.9941163+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6ee8c08-b5db-45d8-8a6f-0fdb0ae757f4">
+    </UnitTestResult>
+    <UnitTestResult executionId="5a39d7c5-b6e7-4cee-98f3-e23699c47695" testId="5cba14b5-e5ee-c2b1-a06b-37bed6f93c4a" testName="ChangePassword_Post_ReturnsRedirectOnSuccess" computerName="IPC" duration="00:00:00.0147391" startTime="2010-10-20T11:24:41.0131173+02:00" endTime="2010-10-20T11:24:41.0431191+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a39d7c5-b6e7-4cee-98f3-e23699c47695">
+    </UnitTestResult>
+    <UnitTestResult executionId="3f6b595e-f56d-47c9-be20-a0bbb15a3fd6" testId="d30e1d2f-e6cb-e291-81f0-8a714099b544" testName="ChangePassword_Post_ReturnsViewIfChangePasswordFails" computerName="IPC" duration="00:00:00.0037860" startTime="2010-10-20T11:24:41.0511195+02:00" endTime="2010-10-20T11:24:41.0691206+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f6b595e-f56d-47c9-be20-a0bbb15a3fd6">
+    </UnitTestResult>
+    <UnitTestResult executionId="b841ff4a-e715-46cb-9c00-493d5a2c5860" testId="3e9bde5a-5e2d-9422-15e8-af1023d291ab" testName="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" computerName="IPC" duration="00:00:00.0007852" startTime="2010-10-20T11:24:41.0781211+02:00" endTime="2010-10-20T11:24:41.0931219+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b841ff4a-e715-46cb-9c00-493d5a2c5860">
+    </UnitTestResult>
+    <UnitTestResult executionId="3cef6f4a-e244-42bf-a720-3f7f1394618e" testId="a06cb7d7-498c-063d-7c92-66bc6db7094d" testName="ChangePasswordSuccess_ReturnsView" computerName="IPC" duration="00:00:00.0005963" startTime="2010-10-20T11:24:41.1061227+02:00" endTime="2010-10-20T11:24:41.1231236+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3cef6f4a-e244-42bf-a720-3f7f1394618e">
+    </UnitTestResult>
+    <UnitTestResult executionId="298c7884-e8c6-4acd-9fa1-077d0855627f" testId="48e14721-341c-ae95-11e2-daadd4d2e741" testName="LogOff_LogsOutAndRedirects" computerName="IPC" duration="00:00:00.0010746" startTime="2010-10-20T11:24:41.1391246+02:00" endTime="2010-10-20T11:24:41.1661261+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="298c7884-e8c6-4acd-9fa1-077d0855627f">
+    </UnitTestResult>
+    <UnitTestResult executionId="348fe44f-894a-45c7-8d8a-984829af8b0b" testId="be82c9eb-d59c-4732-8213-e027717f0ea1" testName="LogOn_Get_ReturnsView" computerName="IPC" duration="00:00:00.0004598" startTime="2010-10-20T11:24:41.2231294+02:00" endTime="2010-10-20T11:24:41.2591314+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="348fe44f-894a-45c7-8d8a-984829af8b0b">
+    </UnitTestResult>
+    <UnitTestResult executionId="4d716121-dbbd-4f1e-828e-412a93273461" testId="4fedca1c-ada7-dc12-c056-cf6eb6267a2e" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" computerName="IPC" duration="00:00:00.0023823" startTime="2010-10-20T11:24:41.2831328+02:00" endTime="2010-10-20T11:24:41.3141346+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d716121-dbbd-4f1e-828e-412a93273461">
+    </UnitTestResult>
+    <UnitTestResult executionId="b8cfe766-5fc3-4b22-accb-4c4acf5c8f44" testId="5133da90-7b3c-2eda-4202-818db91a4da7" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" computerName="IPC" duration="00:00:00.0015730" startTime="2010-10-20T11:24:41.3411361+02:00" endTime="2010-10-20T11:24:41.3671376+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b8cfe766-5fc3-4b22-accb-4c4acf5c8f44">
+    </UnitTestResult>
+    <UnitTestResult executionId="ea9db0cc-c7aa-4056-bd2c-392ab0027732" testId="75b078fc-0e35-02cc-62cb-6bdefd52e9ce" testName="LogOn_Post_ReturnsViewIfModelStateIsInvalid" computerName="IPC" duration="00:00:00.0004870" startTime="2010-10-20T11:24:41.3981394+02:00" endTime="2010-10-20T11:24:41.4221407+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea9db0cc-c7aa-4056-bd2c-392ab0027732">
+    </UnitTestResult>
+    <UnitTestResult executionId="3f675b74-8fdd-466f-8126-9b92bb26b8e8" testId="fba708a9-230b-45e8-d1df-8db936b1ed2c" testName="LogOn_Post_ReturnsViewIfValidateUserFails" computerName="IPC" duration="00:00:00.0005860" startTime="2010-10-20T11:24:41.4481422+02:00" endTime="2010-10-20T11:24:41.4711435+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f675b74-8fdd-466f-8126-9b92bb26b8e8">
+    </UnitTestResult>
+    <UnitTestResult executionId="d59a9fec-4807-453b-86f5-18cc40909669" testId="3da2e4c1-4be7-53ca-b426-e442c1933d7d" testName="Register_Get_ReturnsView" computerName="IPC" duration="00:00:00.0006220" startTime="2010-10-20T11:24:41.5101458+02:00" endTime="2010-10-20T11:24:41.5341471+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d59a9fec-4807-453b-86f5-18cc40909669">
+    </UnitTestResult>
+    <UnitTestResult executionId="01701fe7-fd34-4bb2-8c4a-88b4d3f7d3d1" testId="7aa717d0-c707-ac55-cc57-5c1b5ca8b912" testName="Register_Post_ReturnsRedirectOnSuccess" computerName="IPC" duration="00:00:00.0027929" startTime="2010-10-20T11:24:41.5621488+02:00" endTime="2010-10-20T11:24:41.5941506+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01701fe7-fd34-4bb2-8c4a-88b4d3f7d3d1">
+    </UnitTestResult>
+    <UnitTestResult executionId="e620a1a5-7549-41e1-9c4d-63d4302abd23" testId="6c6a8725-b28a-439f-ffc1-ed926651f669" testName="Register_Post_ReturnsViewIfRegistrationFails" computerName="IPC" duration="00:00:00.0016022" startTime="2010-10-20T11:24:41.6681548+02:00" endTime="2010-10-20T11:24:41.7031568+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e620a1a5-7549-41e1-9c4d-63d4302abd23">
+    </UnitTestResult>
+    <UnitTestResult executionId="6ef6fc60-686d-4ab8-a73c-4efd6e790905" testId="bd3d8429-1fcc-7793-6a46-984fc66b3726" testName="Register_Post_ReturnsViewIfModelStateIsInvalid" computerName="IPC" duration="00:00:00.0005501" startTime="2010-10-20T11:24:42.0681777+02:00" endTime="2010-10-20T11:24:42.0911790+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ef6fc60-686d-4ab8-a73c-4efd6e790905">
+    </UnitTestResult>
+    <UnitTestResult executionId="88ebe51d-c783-4378-a314-3239413a7048" testId="293f5a52-3520-c72e-870f-9e93a0146d1c" testName="Index" computerName="IPC" duration="00:00:00.0009083" startTime="2010-10-20T11:24:42.1151804+02:00" endTime="2010-10-20T11:24:42.1341815+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88ebe51d-c783-4378-a314-3239413a7048">
+    </UnitTestResult>
+    <UnitTestResult executionId="e3f4760c-d945-4758-b190-6df316424b8c" testId="5955a081-a4aa-b278-56a4-81adc5da6ec2" testName="About" computerName="IPC" duration="00:00:00.0005604" startTime="2010-10-20T11:24:42.1461822+02:00" endTime="2010-10-20T11:24:42.1601830+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3f4760c-d945-4758-b190-6df316424b8c">
+    </UnitTestResult>
+  </Results>
+</TestRun>
