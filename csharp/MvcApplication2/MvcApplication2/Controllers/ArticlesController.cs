@@ -36,7 +36,10 @@ namespace MvcApplication2.Controllers
                 }
             }
             ViewData["ArticleTitle"] = articletitle;
-            ViewData["ArticleContent"] = tArticleContent;            
+            tArticleContent = WikiParser.WikiToHTML(tArticleContent);
+            
+            ViewData["ArticleContent"] = tArticleContent;
+
             return View();
         }
         
@@ -78,7 +81,7 @@ namespace MvcApplication2.Controllers
 
         public ActionResult Search()
         {
-            String s = Request.Form["search_article"].ToString();
+            String s = Request.Form["search_text"].ToString();
             var results = from res in db.Articles
                           where res.title.Contains(s)
                           || res.content.Contains(s)

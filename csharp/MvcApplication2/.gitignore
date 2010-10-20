@@ -9,6 +9,10 @@
 /*/_ReSharper.*  #Resharper database
 TestResults/   #MSTest result files
 TestResults/*   #MSTest result files
+/TestResults/   #MSTest result files
+/TestResults/*   #MSTest result files
 /*/*.pdb
 /MvcApplication2/App_Data/Database1.mdf
 /MvcApplication2/App_Data/Database1_log.LDF
+MvcApplication2/App_Data/Database1.mdf
+MvcApplication2/App_Data/Database1_log.LDF

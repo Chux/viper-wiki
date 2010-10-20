@@ -9,7 +9,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%: ViewData["ArticleContent"] %>
+    <%= ViewData["ArticleContent"] %>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ArticleMenuContent" runat="server">
