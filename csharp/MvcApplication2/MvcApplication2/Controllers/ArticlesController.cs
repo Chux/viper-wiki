@@ -36,7 +36,10 @@ namespace MvcApplication2.Controllers
                 }
             }
             ViewData["ArticleTitle"] = articletitle;
-            ViewData["ArticleContent"] = tArticleContent;            
+            tArticleContent = WikiParser.WikiToHTML(tArticleContent);
+            
+            ViewData["ArticleContent"] = tArticleContent;
+
             return View();
         }
         

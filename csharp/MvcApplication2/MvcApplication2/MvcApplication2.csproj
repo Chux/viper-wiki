@@ -87,6 +87,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Users.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\WikiParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
