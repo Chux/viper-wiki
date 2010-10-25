@@ -1,7 +1,11 @@
 <?php
 
-require_once('databaseConnector.class.php');
+require_once('Db.class.php');
 
-$db = new databaseConnector();
+$database = new Db();
 
-print_r($db);
+$result = mysql_query("SELECT * FROM articles");
+
+print_r($result);
+
+

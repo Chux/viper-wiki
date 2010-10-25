@@ -2,23 +2,37 @@
 
 Class Db {
 
-	public $database;
-	
+ 	private $host = "localhost";
+    private $username = "root";
+    private $password = "root";
+    private $database = "viper_wiki";
+    
+   public function __construct() {
+       $this->connect();
+   }
 
-	function __construct($database){		
-		$this->database = $database; 	
-	}
-	
-	function getConnection(){
-	
-		$conn = mysqli_connect("localhost" ,"root","" );
-		$db_handle = mysqli_select_db($conn, $this->database);
-		if (mysqli_connect_errno()) {
-			printf("Connect failed: %s\n", mysqli_connect_error());
-			exit();
-		}
-		return $conn;
-	}
+   private function connect() {
+       mysql_connect($this->host, $this->username, $this->password);
+       mysql_select_db($this->database);
+   }
+   
+   public function ExecuteQuery($SQL) {
+     $success = TRUE;
+     if(!$this->Connection) {
+        $success = FALSE;
+        return $success;
+     }
+     $query = mysql_query($SQL);
+     if(!$query) {
+        $this->SetErrorMessage();
+        $success = FALSE;
+     }
+     else {
+        $this->AffectedRows = mysql_affected_rows();
+     }
+     return $uccess;
+  }
+  
 
 	
 
