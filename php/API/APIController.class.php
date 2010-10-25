@@ -1,5 +1,7 @@
 <?php
 
+require_once 'ArticleHandler.class.php';
+
 class APIController {
 
 	function __construct() {
@@ -9,51 +11,41 @@ class APIController {
 	
 	
 	function getUrl() {
-		//$url = $_SERVER[ "REQUEST_URI" ] or $_SERVER[ "PATH_INFO" ] (?);
-		
-		// exempel att arbeta med
-		$url = "/API/GET/Article/1"; 
-		
+		//med Viktors mod_rewrite
+		$url = $_GET['request']; 
 		return $url;
 	}
 	
 	
 	function processUrl() {
-	
-		$urlArray[] = array();
+		$urlArray = Array();
 		$urlArray = explode ("/", $this->url);
-		$handlerName = $urlArray[3]; // i det här exemplet
+		$handlerName = $urlArray[1];
 		
 		return $handlerName;		
 	}
 	
 	
 	function sendToHandler() {
-		// if wrong send error (default)
-		//else send to handler
-		switch($this->handlerName) {
-			case "User" :
-				header("Location: UserHandler.class.php");
-				break;
-			case "Article" :
-				header("Location: ArticleHandler.class.php");
-				break;
-			case "Tag" :
-				header("Location: TagHandler.class.php");
-				break;
-			default :
-				//error
-				header("HTTP/1.0 404 Not Found");
-		}		
+		if ($this->handlerName != null) {
+			// if ok send to handler
+			//else send error
+			switch($this->handlerName) {
+				case "User" :
+					//send to getUser();
+					//break;
+				case "Article" :
+					ArticleHandler::getArticle();
+					break;
+				case "Tag" :
+					//send to getTag();
+					//break;
+			}
+		}else{
+			echo "Skriv t.ex. GET/Article/2 i adressfältet";
+		}
 	}
-	
-	
-	
-	
-
-	
-	
-	
+		
 } 
  
 
