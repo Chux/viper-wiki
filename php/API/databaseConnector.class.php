@@ -1,22 +1,18 @@
 <?php 
 	class databaseConnector {
-
-	public $mysql;
+		
   	private $mDbHost = 'localhost'; //Most Likely localhost
-  	private $DbUsername = 'viper'; //Your username
-  	private $DbPassword = 'wiki'; //Your password
+  	private $DbUsername = 'root'; //Your username
+  	private $DbPassword = 'root'; //Your password
   	private $DbName = 'viper_wiki'; // Database Name
 
   	function __construct(){
   		//Start the Connection
- 	 	$this->mysql = new mysqli($this->dbHost, $this->dbUsername, $this->dbPassword, $this->dbName);
-  		if (mysqli_connect_errno()){
-        	printf("Connect failed: %s\n", mysqli_connect_error());
-        exit();
-    	} else {
-     	  echo 'connection made';
-    	}
+ 	 	$mysql = new mysqli($this->dbHost, $this->dbUsername, $this->dbPassword, $this->dbName)
+  		or die ('Could not connect to the database server : ' . $mysql->connect_error);
+  			
   	}
+
   	
   	public function query($sql){
     	$query = $sql;
@@ -47,5 +43,4 @@
 
 }
 
-$db = new DatabaseConnector();
 ?>
