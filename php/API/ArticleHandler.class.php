@@ -1,6 +1,15 @@
 <?php
 
-echo "Article page";
+
+class ArticleHandler {
+
+
+	static function getArticle() {
+	
+		echo "Fin artikel";
+	}
+
+}
 
 ?>
 
