@@ -9,9 +9,9 @@ echo "<pre>";
 var_dump($_GET);
 echo "</pre>";
 
-
-$ac = new APIController();
-$ac->sendToHandler();
+$url = 	$_GET['request']; 
+$ac = new APIController($url);
+$ac->processUrl();
 
 
 
