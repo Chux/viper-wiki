@@ -1,21 +1,21 @@
 <?php 
 class databaseConnector {
 		
-  	private $mDBHost = 'localhost'; //Most Likely localhost
-  	private $mDBUsername = 'viper'; //Your username
-  	private $mDBPassword = 'wiki'; //Your password
-  	private $mDBName = 'viper_wiki'; // Database Name
+  	static private $mDBHost = 'localhost'; //Most Likely localhost
+  	static private $mDBUsername = 'viper'; //Your username
+  	static private $mDBPassword = 'wiki'; //Your password
+  	static private $mDBName = 'viper_wiki'; // Database Name
 
-	public function gotConnection() {
-		if(!mysql_connect( $this->mDBHost, $this->mDBUsername, $this->mDBPassword )) {
+	public static function gotConnection() {
+		if( !mysql_connect( 'localhost', 'viper', 'wiki' ) ) {
 			return false;
 		}
-		mysql_select_db( $this->mDBName );
+		mysql_select_db( 'viper_wiki' );
 		return true;
 	}
 
-  	public function query( $pSQL ) {
-		$this->gotConnection();
+  	public static function query( $pSQL ) {
+		self::gotConnection();
 		return mysql_query( $pSQL );
 	}
 

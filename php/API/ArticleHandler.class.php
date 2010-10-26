@@ -1,7 +1,7 @@
 <?php
 
 require_once 'IResourceHandler.php';
-require_once 'Db.class.php';
+require_once 'databaseConnector.class.php';
 require_once 'Article.class.php';
 
 
@@ -13,27 +13,18 @@ class ArticleHandler implements IResourceHandler {
 	}
 
 	
-	function getElement($data) {
-	
-		$con = new Db("viper_wiki");
-		$db = $con->getConnection();
-		
-		$query = $db->prepare("	SELECT articles.*
-								FROM articles
-								WHERE articles.id = ?
-							");
-		$query->bind_param("i", $data);
-		$query->execute();
-		$query->bind_result($id, $userId, $type, $title, $content, $datetime);
+	function getElement( $data ) {
 
-		//$article = array();
-		while ($query->fetch()){
-			$article = new Article($id, $userId, $type, $title, $content, $datetime);
+		$tResult = databaseConnector::query( "SELECT * FROM articles WHERE id = $data" );
+		if( !isset( $tResult ) ) {
+			return false;
 		}
-		$query->close();
+		$tFetchedData = mysql_fetch_assoc( $tResult );	
+
+		$tArticle = new Article( $tFetchedData['id'], $tFetchedData['user_id'], $tFetchedData['type'], $tFetchedData['title'], $tFetchedData['content'], $tFetchedData['date_time'] );
 		
-		$article->printArticle();
-		return $article;
+		$tArticle->printArticle();
+		return $tArticle;
 	
 	}
 

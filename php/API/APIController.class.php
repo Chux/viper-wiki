@@ -1,7 +1,5 @@
 <?php
-
 require_once 'ArticleHandler.class.php';
-require_once 'RestObject.class.php';
 
 class APIController {
 
