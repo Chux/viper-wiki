@@ -23,13 +23,12 @@ $(document).ready( function() {
 		return false;
 	});
 	
-	
-	$("header #search").submit(function(){
+	$("header #search").live('submit', function(){
 		searchQuery = $(this).find('#search_text').attr('value');
 		console.log(searchQuery);
 		result = ac.search(searchQuery);
 		if (result) {
-			$('#article').html(displaySearchResult(result));
+			$('#article').html(displaySearchResults(result));
 		} else {
 			$('#article').html('<a id="edit" rel="">Create this artickle </a>');			
 	    }
@@ -43,15 +42,23 @@ $(document).ready( function() {
 		return false;
 	});
 
-	$(".get").click(function(){
-		console.log("hek");
-		//		var id = $(this).attr('rel');
-//		$('#article').html(articleForm(id));
-//		return false;
+	$('.get').live('click', function() {
+		var id = $(this).attr('rel');
+		console.log(id);
+		$('#article').html(displaySearchContent(result, id));
+		return false;	
 	});
+	
 }); 
 
 // Display functions
+
+/*det är denna du jobbar på!! Den ska skriva ut content som hört till titeln.*/
+function displaySearchContent(result, id) {
+	var html;
+
+	return html;
+}
 
 function articleForm(article){
 	var title = '';
@@ -80,7 +87,7 @@ function articleDisplay(article){
 	
 }
 
-function displaySearchResult(result){
+function displaySearchResults(result){
 	var html = '<h2> Search Result </h2>';
 	for (var i in result){
 		console.log(result[i]);
