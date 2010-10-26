@@ -83,9 +83,8 @@ class APIController {
 						break;
 				}
 			}
-			
 		} else {
-			echo "Skriv t.ex. ***GET/Article/1*** i adressf‰ltet";
+			echo "Skriv t.ex. GET/Article/2 i adressf√§ltet";
 		}
 		
 	}
