@@ -1,6 +1,6 @@
 <?php
 
-interface iResourceHandler {
+interface IResourceHandler {
 	
 	/*
 	** @param $pIdentifier Identifier for the object that should be fetched. In the case of articles it may be an Id or Title corresponding to a row in the DB

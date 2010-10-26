@@ -1,11 +1,11 @@
 <?php
 
-require_once 'IResourceHandler.php';
-require_once 'databaseConnector.class.php';
+require_once 'IResourceHandler.class.php';
+require_once 'DatabaseConnector.class.php';
 require_once 'Article.class.php';
 
 
-class ArticleHandler implements IResourceHandler {
+class ArticleHandler implements iResourceHandler {
 
 	
 	function __construct() {
@@ -28,8 +28,13 @@ class ArticleHandler implements IResourceHandler {
 	
 	}
 
+	// These should be implemented... Soon ;)
+	public function putElement( $pIdentifier ) { }
+	public function postElement( $pIdentifier ) { }
+	public function deleteElement( $pIdentifier ) { }
+	public function getCollection() { }
+	public function putCollcetion() { }
+	public function postCollection() { }
+	public function deleteCollection() { }
+
 }
-
-?>
-
-
