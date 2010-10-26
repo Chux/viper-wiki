@@ -2,9 +2,9 @@ function ApiConnection() {
 	var mStatus = '';
 	var mStatusText = '' ;
 	
-	function get (object , id ) {
+	function get ( resourceType, id ) {
 		$.ajax({
-			url : createUrl(object, id),
+			url : createUrlFromResourceType(resourceType, id),
 			type : 'get',
 			dataType : 'json',
 			async: false,
@@ -66,10 +66,41 @@ function ApiConnection() {
 		return url;
 	};
 	
+	function createUrlFromResourceType(resourceType , id) {
+		var url;
+		if (id !=null){
+			url = APIROOT + resourceType + '/' + id + '/';
+		} else {
+			url = APIROOT + resourceType + '/';
+		}
+		return url;
+	};
+	
+	function search(string){
+		$.ajax({
+			url : APIROOT + 'test.php', //'search' ,
+			type : 'get',
+			data: string,
+			dataType : 'json',
+			async: false,
+			complete : function (transport, textstatus) {
+				object = transport.responseText;
+				tStatusText = transport.statusText; 
+				tStatus = transport.status; 
+			}
+		});
+		setStatus(tStatus);
+		setStatusText(tStatusText);
+		object = $.parseJSON(object);
+		return object;
+
+	}
+	
 	return {
 		getStatus : getStatus,
 		getStatusText : getStatusText,
 		get : get,
-		create : create
+		create : create,
+		search :search
 	};
 }
