@@ -4,7 +4,7 @@ function ApiConnection() {
 	
 	function get (object , id ) {
 		$.ajax({
-			url : '../php/jsTest/olle.php',//createUrl(object, id),
+			url : createUrl(object, id),
 			type : 'get',
 			dataType : 'json',
 			async: false,
@@ -24,7 +24,7 @@ function ApiConnection() {
 		var tStatus,tStatusText;
 		var object;
 		$.ajax({
-			url : '../php/jsTest/olle2.php',//createUrl(object, id),
+			url : createUrl(object, id),
 			type : 'post',
 			dataType : 'json',
 			async: false,
@@ -59,9 +59,9 @@ function ApiConnection() {
 	function createUrl(object , id) {
 		var url;
 		if (id !=null){
-			url = APIROOT + object.ResourceType + '/' + id + '/';
+			url = APIROOT + object.getResourceType() + '/' + id + '/';
 		} else {
-			url = APIROOT + object.ResourceType + '/';
+			url = APIROOT + object.getResourceType() + '/';
 		}
 		return url;
 	};

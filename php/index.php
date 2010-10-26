@@ -28,7 +28,7 @@
 				<input type="submit" name="search_submit" id="search_submit" value="Seach">
 			</form>
 		</header>
-		<article>
+		<article id="article">
 		</article>
 		<footer>
 			Här kan man ju skriva någonslags copyleft notice 2010

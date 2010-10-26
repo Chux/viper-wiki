@@ -6,8 +6,7 @@ function Model(){
 	};
 	
 	return {
-		getResourceType : getResourceType,
-		test: test
+		getResourceType : getResourceType
 	};
 }
 
