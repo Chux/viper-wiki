@@ -8,6 +8,7 @@ function ArticleModel() {
 	var title;
 	var dateTime;
 	var userId;
+	var id;
 	
 	function getResourceType(){
 		return resourceType;
