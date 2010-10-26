@@ -1,4 +1,4 @@
-To setup a working copy you need 5.X( both 5.3 and 5.2 should be fine) and mysql.
+To setup a working copy you need PHP version 5.x( both 5.3 and 5.2 should be fine) and mysql.
 To get the database make use of the "viper_wiki_db.sql" in dev/
 Create a user with name "viper" and password "wiki" with read and write privileges on the database viper_wiki.
 
