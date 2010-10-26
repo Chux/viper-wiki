@@ -1,46 +1,22 @@
 <?php 
-	class databaseConnector {
+class databaseConnector {
 		
-  	private $mDbHost = 'localhost'; //Most Likely localhost
-  	private $DbUsername = 'root'; //Your username
-  	private $DbPassword = 'root'; //Your password
-  	private $DbName = 'viper_wiki'; // Database Name
+  	private $mDBHost = 'localhost'; //Most Likely localhost
+  	private $mDBUsername = 'viper'; //Your username
+  	private $mDBPassword = 'wiki'; //Your password
+  	private $mDBName = 'viper_wiki'; // Database Name
 
-  	function __construct(){
-  		//Start the Connection
- 	 	$mysql = new mysqli($this->dbHost, $this->dbUsername, $this->dbPassword, $this->dbName)
-  		or die ('Could not connect to the database server : ' . $mysql->connect_error);
-  			
-  	}
-
-  	
-  	public function query($sql){
-    	$query = $sql;
-    	self::preparedStatement($query);
+	public function gotConnection() {
+		if(!mysql_connect( $this->mDBHost, $this->mDBUsername, $this->mDBPassword )) {
+			return false;
+		}
+		mysql_select_db( $this->mDBName );
+		return true;
 	}
 
-	public function preparedStatement($query) { ### parameter $query added
-    	if ($stmt = $this->db->prepare($query)) { 
-        /* execute statement */
-        $stmt->execute();
-
-        /* bind result variables */
-        $stmt->bind_result($name, $code);
-
-        /* fetch values */
-        while ($stmt->fetch()) {
-            printf ("%s (%s)\n", $name, $code);
-        }
-
-        /* close statement */
-        $stmt->close();	    
-   	 	}
-	}
-
-	public function __destruct(){
-		
+  	public function query( $pSQL ) {
+		$this->gotConnection();
+		return mysql_query( $pSQL );
 	}
 
 }
-
-?>
