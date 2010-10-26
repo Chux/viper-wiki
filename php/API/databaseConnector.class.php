@@ -1,40 +1,22 @@
-<?php
+<?php 
+class databaseConnector {
+		
+  	private $mDBHost = 'localhost'; //Most Likely localhost
+  	private $mDBUsername = 'viper'; //Your username
+  	private $mDBPassword = 'wiki'; //Your password
+  	private $mDBName = 'viper_wiki'; // Database Name
 
-Class Db {
+	public function gotConnection() {
+		if(!mysql_connect( $this->mDBHost, $this->mDBUsername, $this->mDBPassword )) {
+			return false;
+		}
+		mysql_select_db( $this->mDBName );
+		return true;
+	}
 
- 	private $host = "localhost";
-    private $username = "root";
-    private $password = "root";
-    private $database = "viper_wiki";
-    
-   public function __construct() {
-       $this->connect();
-   }
-
-   private function connect() {
-       mysql_connect($this->host, $this->username, $this->password);
-       mysql_select_db($this->database);
-   }
-   
-   public function executeQuery($SQL) {
-     $success = TRUE;
-     if(!$this->Connection) {
-        $success = FALSE;
-        return $success;
-     }
-     $query = mysql_query($SQL);
-     if(!$query) {
-        $this->SetErrorMessage();
-        $success = FALSE;
-     }
-     else {
-        $this->affectedRows = mysql_affected_rows();
-     }
-     return $success;
-  }
-  
-
-	
+  	public function query( $pSQL ) {
+		$this->gotConnection();
+		return mysql_query( $pSQL );
+	}
 
 }
-?>
