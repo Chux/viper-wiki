@@ -5,13 +5,6 @@
 		<meta charset="UTF-8">
 		<title>Artikelnamn | Viper Wiki instans</title>
 		<link rel="stylesheet" type="text/css" href="layout.css">
-		<script type="application/javascript" src="js/setup.js" ></script>
-		<script type="application/javascript" src="js/lib/jquery-1.4.3.min.js" ></script>
-		<script type="application/javascript" src="js/Model.js" ></script>
-		<script type="application/javascript" src="js/ArticleModel.js" ></script>
-		<script type="application/javascript" src="js/ApiConnection.js" ></script>
-		<script type="application/javascript" src="js/ajaxtest.js" ></script>
-		
 	</head>
 	<body>
 		<header>
@@ -29,9 +22,21 @@
 			</form>
 		</header>
 		<article>
+			<header>
+				<!-- Den här menyn ska ju bara synas om man är inloggad -->
+				<menu>
+					<li><a href="#">Redigera artikel</a></li>
+					<li><a href="#">Diskussion/Kommentarer</a></li>
+					<li><a href="#">Nått mer?</a></li>
+				</menu>
+				<h1>Artikel-/Sid-namn</h1>
+			</header>
+
+			Här lägger vi content..!
+
 		</article>
 		<footer>
-			Här kan man ju skriva någonslags copyleft notice 2010
+			Här kan man ju skriva någonslags copyright notice 2010
 		</footer>
 	</body>
 </html>
