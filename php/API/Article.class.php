@@ -1,6 +1,6 @@
 <?php
 require_once('IModel.class.php');
-require_once('wikiSyntaxConverter.class.php');
+require_once('WikiSyntaxConverter.class.php');
 
 
 class Article implements IModel {

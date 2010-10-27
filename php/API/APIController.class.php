@@ -15,9 +15,9 @@ class APIController {
 		$tURLArray 		= Array();
 		$tURLArray 		= explode ( "/", $this->mURL );
 		$tMethod 		= strtolower( $_SERVER['REQUEST_METHOD'] );
-		$tHandlerName 		= $tURLArray[1];
-		if( isset( $tURLArray[2] ) ) {
-			$tData = $tURLArray[2];
+		$tHandlerName 		= $tURLArray[0];
+		if( isset( $tURLArray[1] ) ) {
+			$tData = $tURLArray[1];
 		}
 
 		// if ok send to handler else send error

@@ -37,9 +37,9 @@ class WikiSyntaxConverter {
     $tConverted = preg_replace('/(\n[ ]*[^#* ][^\n]*)\n(([ ]*[*]([^\n]*)\n)+)/','${1}<ul>'."\n".'${2}'.'</ul>'."\n", $tConverted);
     $tConverted = preg_replace('/\n[ ]*[\*#]+([^\n]*)/','<li>${1}</li>', $tConverted);
     
-    $tConverted = preg_replace('/\[\[([^\n\']+)\|([^\n\']+)\]\]/','<a href=${1}>${2}</a>',$tConverted); // Internal links with diffrent link text
+    $tConverted = preg_replace('/\[\[([^\n\']+)\|([^\n\']+)\]\]/','<a rel="internal" href=${1}>${2}</a>',$tConverted); // Internal links with diffrent link text
     $tConverted = preg_replace('/\[\[([^\n\']+)\]\]/','<a href=${1}>${1}</a>',$tConverted); // Internal links
-    $tConverted = preg_replace('/((?:http|https)(?::\\/{2}[\\w]+)(?:[\\/|\\.]?)(?:[^\\s"]*))/', '<a href=${1}>${1}</a>', $tConverted ); //External links
+    $tConverted = preg_replace('/((?:http|https)(?::\\/{2}[\\w]+)(?:[\\/|\\.]?)(?:[^\\s"]*))/', '<a rel="external" href=${1}>${1}</a>', $tConverted ); //External links
 
     return $tConverted;
 
