@@ -18,6 +18,7 @@ class APIController {
 		$tHandlerName 		= $tURLArray[1];
 		if( isset( $tURLArray[2] ) ) {
 			$tData = $tURLArray[2];
+			echo $tData;
 		}
 
 		// if ok send to handler else send error
@@ -69,7 +70,13 @@ class APIController {
 								}
 								break;
 							case "post" :
-								ArticleHandler::postElement( $tData );
+								$tResource = ArticleHandler::postElement( $tData );
+								if ( !is_numeric($tResource)) {
+									header ('HTTP/1.1 500 Internal Server Error');
+								}
+								else {
+									ArticleHandler::getElement($tResource);
+								}
 								break;
 							case "put" :
 								ArticleHandler::putElement( $tData );

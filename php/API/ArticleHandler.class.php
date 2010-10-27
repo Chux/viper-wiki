@@ -33,8 +33,28 @@ class ArticleHandler implements iResourceHandler {
 	}
 
 	// These should be implemented... Soon ;)
-	public function putElement( $pIdentifier ) { }
-	public function postElement( $pIdentifier ) { }
+	public function putElement( $pIdentifier ) {
+
+		$tQuery = databaseConnector::query( "	UPDATE `articles` 
+												SET `articles`.`title` = {$pIdentifier['title']} , 
+													`articles`.`content` = {$pIdentifier['content']},
+													`articles`.`date_time` = NOW()
+												WHERE `articles`.`id` = {$pIdentifier['id']} 
+											");
+		return $pIdentifier['id'];
+
+	}	
+	
+	public function postElement( $pIdentifier ) {
+		$tQuery = databaseConnector::query(	"INSERT INTO `articles` ( id, user_id, type, title, content, date_time)
+											VALUES ( null, null, null, {$pIdentifier['title']}, {$pIdentifier['content']}, NOW() ) ");
+		$tArticleId = mysql_insert_id();
+	
+		return $tArticleId ;
+	}
+	
+	
+	
 	public function deleteElement( $pIdentifier ) { }
 
 	public function getCollection() { 
