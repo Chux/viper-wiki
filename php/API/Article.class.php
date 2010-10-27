@@ -42,17 +42,4 @@ class Article implements IModel {
 		// Notice that we shouldnt really UPDATE.. we should insert a new row( maybe put getInsertSQL() to use again)!!! / Viktor
 	}
 
-	// This one is used for json_encode() in APIController or something like that
-	public function toArray() {
-		$tArray['content']	= $this->mContent;
-		$tArray['datetime']	= $this->mDatetime;
-		$tArray['id'] 		= $this->mId;	
-		$tArray['type'] 	= $this->mType;
-		$tArray['title'] 	= $this->mTitle;
-		$tArray['user_id'] 	= $this->mUserId;
-		return $tArray;
-	}
-
 }
-
-?>

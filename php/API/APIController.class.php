@@ -1,7 +1,6 @@
 <?php
 require_once 'ArticleHandler.class.php';
 require_once 'UserHandler.class.php';
-require_once 'Article.class.php';
 
 class APIController {
 
@@ -17,7 +16,9 @@ class APIController {
 		$tURLArray 		= explode ( "/", $this->mURL );
 		$tMethod 		= strtolower( $_SERVER['REQUEST_METHOD'] );
 		$tHandlerName 		= $tURLArray[1];
-		$tData 			= $tURLArray[2];
+		if( isset( $tURLArray[2] ) ) {
+			$tData = $tURLArray[2];
+		}
 
 		// if ok send to handler else send error
 		if ( isset( $tHandlerName ) ) {
@@ -31,7 +32,12 @@ class APIController {
 							case "get" :
 								$tResource = UserHandler::getElement( $tData );
 								if( $tResource == false ) {
-									// Give 204 - no content
+									header('HTTP/1.1 204 No user found');
+									exit;
+								}
+								else {
+									echo json_encode( get_object_vars( $tResource ) );
+									exit;
 								}
 								break;
 							case "post" :
@@ -44,7 +50,7 @@ class APIController {
 								UserHandler::deleteElement( $tData );
 								break;
 							default:
-								// Give 404 - not found
+								header('HTTP/1.1 404 Not Found');
 								break;
 						}
 					break;
@@ -54,12 +60,11 @@ class APIController {
 							case "get" :
 								$tResource = ArticleHandler::getElement( $tData );
 								if( $tResource == false ) {
-									// Give 204 - no content
-									header('HTTP/1.1 204 No Content');
+									header('HTTP/1.1 204 No article found');
 									exit;
 								}
 								else {
-									echo json_encode( $tResource->toArray() );
+									echo json_encode( get_object_vars( $tResource ) );
 									exit;
 								}
 								break;
@@ -73,7 +78,7 @@ class APIController {
 								ArticleHandler::deleteElement( $tData );
 								break;
 							default:
-								// Give 404 - not found
+								header('HTTP/1.1 404 Not Found');
 								break;
 						}
 					break;
@@ -84,17 +89,34 @@ class APIController {
 				}
 				
 			} else {
-			
-				switch($tHandlerName) {
-					case "User" :
-						UserHandler::getCollection();
-						break;
-					case "Article" :
-						ArticleHandler::getCollection();
-						break;
-					case "Tag" :
-						TagHandler::getCollection();
-						break;
+				switch( $tMethod ) {
+					case "get" :	
+						switch($tHandlerName) {
+							case "User" :
+								$tResource = UserHandler::getCollection();
+								if( $tResource == false ) {
+									header('HTTP/1.1 204 No users found');
+									exit;
+								}
+								else {
+									echo json_encode( $tResource );
+								}	
+							  	break;
+					  		case "Article" :
+								$tResource = ArticleHandler::getCollection();
+								if( $tResource == false ) {
+									header('HTTP/1.1 204 No articles found');
+									exit;
+								}
+								else {
+									echo json_encode(  $tResource );
+									exit;
+								}
+								break;
+						  	case "Tag" :
+								TagHandler::getCollection();
+								break;
+						}
 				}
 
 			}
