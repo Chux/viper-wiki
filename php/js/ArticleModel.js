@@ -3,7 +3,7 @@ ArticleModel.prototype.constructor = ArticleModel;
 
 function ArticleModel() {
 	Model.call(this);
-	var resourceType = 'ArticleModel';
+	var resourceType = 'Article';
 	var content;
 	var title;
 	var dateTime;

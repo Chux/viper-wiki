@@ -16,6 +16,14 @@ function ApiConnection() {
 		});
 		setStatus(tStatus);
 		setStatusText(tStatusText);
+		try {
+			object = $.parseJSON(object);
+		}
+		catch (e) {
+			console.log('trassigt');
+			object = null;
+		}
+
 		return object;
 	
 	};
@@ -36,10 +44,35 @@ function ApiConnection() {
 		});
 		setStatus(tStatus);
 		setStatusText(tStatusText);
-		//status = xhr.status;
-		//statusText = xhr.statusText;
 		return object;
 	}
+	
+	function search(string){
+		$.ajax({
+			url : APIROOT + 'search' ,
+			type : 'get',
+			data: string,
+			dataType : 'json',
+			async: false,
+			complete : function (transport, textstatus) {
+				object = transport.responseText;
+				tStatusText = transport.statusText; 
+				tStatus = transport.status; 
+			}
+		});
+		setStatus(tStatus);
+		setStatusText(tStatusText);
+		try {
+			object = $.parseJSON(object);
+		}
+		catch (e) {
+			console.log('trassigt');
+			object = null;
+		}
+		return object;
+	}
+
+	
 	
 	function setStatus(pStatus){
 		mStatus = pStatus; 
@@ -59,9 +92,9 @@ function ApiConnection() {
 	function createUrl(object , id) {
 		var url;
 		if (id !=null){
-			url = APIROOT + object.getResourceType() + '/' + id + '/';
+			url = APIROOT + PREFIX + object.getResourceType() + '/' + id + '/'; 
 		} else {
-			url = APIROOT + object.getResourceType() + '/';
+			url = APIROOT + PREFIX + object.getResourceType() + '/';
 		}
 		return url;
 	};
@@ -69,32 +102,13 @@ function ApiConnection() {
 	function createUrlFromResourceType(resourceType , id) {
 		var url;
 		if (id !=null){
-			url = APIROOT + resourceType + '/' + id + '/';
+			url = APIROOT + PREFIX + resourceType + '/' + id + '/';
 		} else {
-			url = APIROOT + resourceType + '/';
+			url = APIROOT + PREFIX  + resourceType + '/';
 		}
 		return url;
 	};
 	
-	function search(string){
-		$.ajax({
-			url : APIROOT + 'test.php', //'search' ,
-			type : 'get',
-			data: string,
-			dataType : 'json',
-			async: false,
-			complete : function (transport, textstatus) {
-				object = transport.responseText;
-				tStatusText = transport.statusText; 
-				tStatus = transport.status; 
-			}
-		});
-		setStatus(tStatus);
-		setStatusText(tStatusText);
-		object = $.parseJSON(object);
-		return object;
-
-	}
 	
 	return {
 		getStatus : getStatus,

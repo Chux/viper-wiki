@@ -122,6 +122,7 @@ article {
 	display: block;
 	padding: 1em;
 	-moz-box-shadow: 0px 5px 10px #363;
+	overflow:hidden;
 }
 
 article>header>menu {
@@ -134,6 +135,19 @@ article>header>menu {
 article>header>menu li {
 	float: left;
 	padding: 5px 10px;
+}
+article input, article label{
+	float:left;
+	clear:both;
+	width:600px;
+}
+
+article textarea {
+	float:left;
+	clear:both;
+	width:600px;
+	height:300px;
+		
 }
 
 footer {

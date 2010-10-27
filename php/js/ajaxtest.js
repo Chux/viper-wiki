@@ -1,65 +1,111 @@
 $(document).ready( function() {
+	var mLoggedIn = false; 
 	ac = new ApiConnection();
 	article = new ArticleModel();
-	$("#article").html(start());
-	
-// INIT
-	function start(){
-		ac = new ApiConnection();
-		var article = ac.get('article',1);
-		return articleDisplay(article);
-		
-	}
+	user = new UserModel();
+	auth = new AuthModel();
+	$("#article").html(start());	
+	eventHandler();
 
+});
+
+//INIT
+function start(){
+	ac = new ApiConnection();
+	var article = ac.get('Article', 1);
+	if (ac.getStatus() != '200' ){
+		handleError(ac.getStatus(),ac.getStatusText());
+		return "";
+	} else if (article != null){
+		console.log(window.defaultStatus);	
+		return articleDisplay(article);
+	}
+	return ""
+	console.log(ac.getStatus());
 	
-	
+}
+
 //Event handlers
+function eventHandler(){		
 	//form submits
-	
-	$("#article #articleForm").submit(function() {
+	$("#article #articleForm").live('submit', function() {
 		article.title = $(this).find('#title').attr('value');
 		article.content = $(this).find('#content').attr('value');
-		console.log("is it hapend");
+		if (article.id){
+			ac.create(article);	//should be update
+		} else { 
+			ac.create(article);
+		}
+		console.log(ac.getStatus());
+		$('#article').html(articleDisplay(article));
 		return false;
 	});
 	
 	$("header #search").live('submit', function(){
+		ac = new ApiConnection();
 		searchQuery = $(this).find('#search_text').attr('value');
-		console.log(searchQuery);
 		result = ac.search(searchQuery);
 		if (result) {
 			$('#article').html(displaySearchResults(result));
 		} else {
-			$('#article').html('<a id="edit" rel="">Create this artickle </a>');			
+			$('#article').html('<a href="" id="create" rel="">Create this article </a>');			
 	    }
+		console.log(ac.getStatus());
 		return false;
+	});
+	
+	$('#article #loginForm').live('submit',function(){
+		auth.username = $(this).find('#username').attr('value');
+		auth.password = $(this).find('#password').attr('value');
+		result = ac.create(auth); 
+		if (ac.getStatus() == 200) {
+			mLoggedIn= true ;
+		}
+			
+		if (result) {
+			$('#article').html(displaySearchResults(result));
+		} else {
+			$('#article').html('<a href="" id="create" rel="">Create this article </a>');			
+	    }
+		
 	});
 
 	// link clicks
-	$('#update').click(function(){
-		var id = $(this).attr('rel');
-		$('#article').html(articleForm(id));
-		return false;
-	});
-
-	$('.get').live('click', function() {
+	$('#update').live('click', function(){
 		var id = $(this).attr('rel');
 		console.log(id);
-		$('#article').html(displaySearchContent(result, id));
+		article = ac.get('Article',id);		
+		$('#article').html(articleForm(article));
+		console.log(ac.getStatus());
+		return false;	
+	});
+
+	$('#create').live('click', function() {
+		$('#article').html(articleForm());
+		return false;
+	});
+	
+	$('.get').live('click', function() {
+		var id = $(this).attr('rel');
+		article = ac.get('Article',1);
+		$('#article').html(articleDisplay(article));
+		console.log(ac.getStatus());
 		return false;	
 	});
 	
-}); 
+	$('#loginLink').live('click', function() {
+		$("article").html(displayLogin());
+		return false;	
+	});
 
-// Display functions
-
-/*det är denna du jobbar på!! Den ska skriva ut content som hört till titeln.*/
-function displaySearchContent(result, id) {
-	var html;
-
-	return html;
 }
 
+
+// Display functions
+function handleError(statusCode,statusText){
+	$("#errormessages").html('<h1>' + statusCode +' '+ statusText + '</h1>');
+	
+}
 function articleForm(article){
 	var title = '';
 	var content = '';
@@ -76,13 +122,12 @@ function articleForm(article){
 	
 	return html;
 }
-
 function articleDisplay(article){
-	var html = '<a href="#" id="update" rel="' + article.id +'">Edit this artickel</a>'+  //TODO Implement access rules when user is not logged in
+	var html = '<a href="" id="update" rel="' + article.id +'">Edit this artickel</a>'+  //TODO Implement access rules when user is not logged in
 	'<header><h2>'+article.title+'</h2></header>' +
 	'<div id="content">' + article.content + '</div>'+
-	'<div id="userId">' + article.userId + '</div>'+
-	'<div id="dateTime">' + article.dateTime + '</div>';
+	'<div id="userId">' + article.user_id + '</div>'+
+	'<div id="dateTime">' + article.datetime + '</div>';
 	return html;
 	
 }
@@ -91,9 +136,19 @@ function displaySearchResults(result){
 	var html = '<h2> Search Result </h2>';
 	for (var i in result){
 		console.log(result[i]);
-		html += '<a href="#" class="get" rel="' + result[i].id +'">'+result[i].title+'</a>' +
+		html += '<a href="" class="get" rel="' + result[i].id +'">'+result[i].title+'</a>' +
 		'<div id="userId">' + result[i].userId + '</div>'+
 		'<div id="dateTime">' + result[i].dateTime + '</div>';
 	}
 	return html;
+}
+
+function displayLogin(){
+	var html = '<form id=loginForm>' +
+	'<label for="username">Username</label><input type="text" name="username" id="username" />'+
+	'<label for="password">Password</label><input  name="password" id="password" type="text" />'+
+	'<input type="submit" id="submitArticle" value="Log In"/>'+
+	'</form>';
+	
+	return html;	
 }
