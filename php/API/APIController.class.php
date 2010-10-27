@@ -1,6 +1,7 @@
 <?php
 require_once 'ArticleHandler.class.php';
 require_once 'UserHandler.class.php';
+require_once 'AuthenticationHandler.class.php';
 
 class APIController {
 
@@ -19,13 +20,10 @@ class APIController {
 		if( isset( $tURLArray[1] ) ) {
 			$tData = $tURLArray[1];
 		}
-
 		// if ok send to handler else send error
 		if ( isset( $tHandlerName ) ) {
-
 			// if not empty send to getElement else send to getCollection
 			if ( isset( $tData ) ) {
-			
 				switch( $tHandlerName ) {
 					case "User" :
 						switch( $tMethod ) {
@@ -82,7 +80,7 @@ class APIController {
 								break;
 						}
 					break;
-					
+				
 					case "Tag" :
 						// TagHandler::getElement($tData);
 						// break;
@@ -100,6 +98,7 @@ class APIController {
 								}
 								else {
 									echo json_encode( $tResource );
+									exit;
 								}	
 							  	break;
 					  		case "Article" :
@@ -113,8 +112,32 @@ class APIController {
 									exit;
 								}
 								break;
+							case "Auth" :
+								$tAuthentication = new AuthenticationHandler();
+								echo json_encode( $tAuthentication->getElement( null ) );
+								exit;
+								break;
 						  	case "Tag" :
 								TagHandler::getCollection();
+								break;
+						}
+					case "post" :	
+						switch($tHandlerName) {
+							case "User" :
+							  	break;
+					  		case "Article" :
+								break;
+							case "Auth" :
+								$tAuthentication = new AuthenticationHandler();
+								if ( $tAuthentication->postElement( $_POST ) ) {
+									header('HTTP/1.1 200 Authentication OK');
+								}
+								else {
+									header('HTTP/1.1 401 Authentication failed');
+								}
+								exit;
+								break;
+						  	case "Tag" :
 								break;
 						}
 				}
