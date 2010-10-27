@@ -17,9 +17,4 @@ interface IModel {
 	*/
 	public function getUpdateSQL();
 
-	/*
-	**
-	*/
-	public function toArray();
-
 }

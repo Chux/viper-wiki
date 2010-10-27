@@ -1,0 +1,52 @@
+[27-Oct-2010 09:24:16] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 09:24:16] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 09:46:29] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 09:46:29] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 10:05:02] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 10:05:02] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 10:06:31] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 10:06:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 10:46:43] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 10:46:43] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 10:49:03] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 10:49:03] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 10:49:50] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 10:49:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 10:49:53] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 10:49:53] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 10:50:00] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 10:50:00] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 10:50:02] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 10:50:02] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 10:50:03] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 10:50:03] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 10:50:41] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 10:50:41] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 10:51:23] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 10:51:23] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 10:56:04] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 10:56:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 10:56:07] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 10:56:07] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:00:42] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php on line 19
+[27-Oct-2010 11:00:42] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/ArticleHandler.class.php:19) in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 58
+[27-Oct-2010 11:01:23] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:01:23] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:04:58] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:04:58] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:05:56] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:05:56] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:06:24] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:06:24] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:08:04] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:08:04] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:08:27] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:08:27] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:24:58] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:24:58] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:29:03] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:29:03] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 11:29:34] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 11:29:34] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20
+[27-Oct-2010 12:26:48] PHP Notice:  Undefined offset:  1 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 19
+[27-Oct-2010 12:26:48] PHP Notice:  Undefined offset:  2 in /Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/php/API/APIController.class.php on line 20

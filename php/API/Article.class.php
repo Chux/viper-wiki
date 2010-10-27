@@ -1,5 +1,6 @@
 <?php
 require_once('IModel.class.php');
+require_once('WikiSyntaxConverter.class.php');
 
 
 class Article implements IModel {
@@ -13,19 +14,13 @@ class Article implements IModel {
 
 
 	public function __construct( $pId, $pUserId, $pType, $pTitle, $pContent, $pDatetime ) {
-		$this->mId		= $pId;
+		$this->mId			= $pId;
 		$this->mUserId 		= $pUserId;
 		$this->mType 		= $pType;
 		$this->mTitle		= $pTitle;
 		$this->mContent		= $pContent;
 		$this->mDatetime 	= $pDatetime;
-	}
-	
-	public function printArticle() {
-		echo "<h2>{$this->mTitle}</h2>";
-		echo "<p>{$this->mContent}</p>";
-		echo "<span> {$this->mDatetime} </span>";
-		echo "<span> {$this->mUserId} </span>";
+		$this->mContent = WikiSyntaxConverter::convertToHTML( $pContent );
 	}
 
 	public function getDeleteSQL() {
@@ -47,17 +42,4 @@ class Article implements IModel {
 		// Notice that we shouldnt really UPDATE.. we should insert a new row( maybe put getInsertSQL() to use again)!!! / Viktor
 	}
 
-	// This one is used for json_encode() in APIController or something like that
-	public function toArray() {
-		$tArray['content']	= $this->mContent;
-		$tArray['datetime']	= $this->mDatetime;
-		$tArray['id'] 		= $this->mId;	
-		$tArray['type'] 	= $this->mType;
-		$tArray['title'] 	= $this->mTitle;
-		$tArray['user_id'] 	= $this->mUserId;
-		return $tArray;
-	}
-
 }
-
-?>
