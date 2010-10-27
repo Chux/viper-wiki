@@ -1,8 +1,10 @@
 <?php
 require('wikiSyntaxConverter.class.php');
+require('Article.class.php');
 
 $result = WikiSyntaxConverter::convertToHTML($_POST['wikisyntax']);
 print_r($result); 
+
 
 	
 echo "<pre>";

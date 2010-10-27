@@ -1,5 +1,6 @@
 <?php
 require_once('IModel.class.php');
+require_once('wikiSyntaxConverter.class.php');
 
 
 class Article implements IModel {
@@ -19,13 +20,7 @@ class Article implements IModel {
 		$this->mTitle		= $pTitle;
 		$this->mContent		= $pContent;
 		$this->mDatetime 	= $pDatetime;
-	}
-	
-	public function printArticle() {
-		echo "<h2>{$this->mTitle}</h2>";
-		echo "<p>{$this->mContent}</p>";
-		echo "<span> {$this->mDatetime} </span>";
-		echo "<span> {$this->mUserId} </span>";
+		$this->mContent = WikiSyntaxConverter::convertToHTML( $pContent );
 	}
 
 	public function getDeleteSQL() {
