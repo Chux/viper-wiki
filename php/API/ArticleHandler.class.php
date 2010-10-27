@@ -16,14 +16,12 @@ class ArticleHandler implements iResourceHandler {
 	function getElement( $data ) {
 
 		$tResult = databaseConnector::query( "SELECT * FROM articles WHERE id = $data" );
-		if( !isset( $tResult ) ) {
+		$tFetchedData = mysql_fetch_assoc( $tResult );	
+		if( !isset( $tResult ) || $tFetchedData  == null) {
 			return false;
 		}
-		$tFetchedData = mysql_fetch_assoc( $tResult );	
-
 		$tArticle = new Article( $tFetchedData['id'], $tFetchedData['user_id'], $tFetchedData['type'], $tFetchedData['title'], $tFetchedData['content'], $tFetchedData['date_time'] );
 		
-		$tArticle->printArticle();
 		return $tArticle;
 	
 	}

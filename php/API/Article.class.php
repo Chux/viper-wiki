@@ -1,29 +1,61 @@
 <?php
-
-class Article {
-
-	public $id;
-	public $userId;
-	public $type;
-	public $title;
-	public $content;
-	public $datetime;
+require_once('IModel.class.php');
 
 
-	function __construct($id, $userId, $type, $title, $content, $datetime) {
-		$this->id			= $id;
-		$this->userId 		= $userId;
-		$this->type 		= $type;
-		$this->title		= $title;
-		$this->content		= $content;
-		$this->datetime 	= $datetime;
+class Article implements IModel {
+
+	public $mId;
+	public $mUserId;
+	public $mType;
+	public $mTitle;
+	public $mContent;
+	public $mDatetime;
+
+
+	public function __construct( $pId, $pUserId, $pType, $pTitle, $pContent, $pDatetime ) {
+		$this->mId		= $pId;
+		$this->mUserId 		= $pUserId;
+		$this->mType 		= $pType;
+		$this->mTitle		= $pTitle;
+		$this->mContent		= $pContent;
+		$this->mDatetime 	= $pDatetime;
 	}
 	
-	function  printArticle(){
-		echo "<h2>{$this->title}</h2>";
-		echo "<p>{$this->content}</p>";
-		echo "<span> {$this->datetime} </span>";
-		echo "<span> {$this->userId} </span>";		
+	public function printArticle() {
+		echo "<h2>{$this->mTitle}</h2>";
+		echo "<p>{$this->mContent}</p>";
+		echo "<span> {$this->mDatetime} </span>";
+		echo "<span> {$this->mUserId} </span>";
+	}
+
+	public function getDeleteSQL() {
+		// Since we want to keep track of all articles and their history, we dont actually delete it, but we change its `type` column to 'deleted'
+		if( $this->mId != null ) {
+			return false; // It doesnt exist in the database, can't do this!
+		}
+		return	"UPDATE `articles`
+			 SET `type` = 'deleted'
+			 WHERE id = { $this->mId }";
+	}
+
+	public function getInsertSQL() {
+		// to be implemented..
+	}
+
+	public function getUpdateSQL() {
+		// to be implemented..
+		// Notice that we shouldnt really UPDATE.. we should insert a new row( maybe put getInsertSQL() to use again)!!! / Viktor
+	}
+
+	// This one is used for json_encode() in APIController or something like that
+	public function toArray() {
+		$tArray['content']	= $this->mContent;
+		$tArray['datetime']	= $this->mDatetime;
+		$tArray['id'] 		= $this->mId;	
+		$tArray['type'] 	= $this->mType;
+		$tArray['title'] 	= $this->mTitle;
+		$tArray['user_id'] 	= $this->mUserId;
+		return $tArray;
 	}
 
 }

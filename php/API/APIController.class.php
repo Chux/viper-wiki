@@ -1,64 +1,79 @@
 <?php
 require_once 'ArticleHandler.class.php';
 require_once 'UserHandler.class.php';
+require_once 'Article.class.php';
 
 class APIController {
 
-	public $url;
+	public $mURL;
 
-	function __construct($url) {
-		$this->url = $url;
-		//$this->handlerName = $this->processUrl();
+	function __construct( $pURL ) {
+		$this->mURL = $pURL;
 	}
 	
 	
 	function processUrl() {
-		$tUrlArray 		= Array();
-		$tUrlArray 		= explode ("/", $this->url);
-		$tMethod 		= strtolower($_SERVER['REQUEST_METHOD']);
-		$tHandlerName 	= $tUrlArray[1];
-		$tData 			= $tUrlArray[2];
-		//$tReturnRestObj	= new RestObject();
-		
-		
+		$tURLArray 		= Array();
+		$tURLArray 		= explode ( "/", $this->mURL );
+		$tMethod 		= strtolower( $_SERVER['REQUEST_METHOD'] );
+		$tHandlerName 		= $tURLArray[1];
+		$tData 			= $tURLArray[2];
+
 		// if ok send to handler else send error
-		if ( isset($tHandlerName) ) {
+		if ( isset( $tHandlerName ) ) {
 
 			// if not empty send to getElement else send to getCollection
-			if ( isset($tData) ) {
+			if ( isset( $tData ) ) {
 			
-				switch($tHandlerName) {
+				switch( $tHandlerName ) {
 					case "User" :
-						
-						switch($tMethod) {
+						switch( $tMethod ) {
 							case "get" :
-								UserHandler::getElement($tData);
+								$tResource = UserHandler::getElement( $tData );
+								if( $tResource == false ) {
+									// Give 204 - no content
+								}
 								break;
 							case "post" :
-								UserHandler::postElement($tData);
+								UserHandler::postElement( $tData );
 								break;
 							case "put" :
-								UserHandler::putElement($tData);
+								UserHandler::putElement( $tData );
 								break;
 							case "delete" :
-								UserHandler::deleteElement($tData);
+								UserHandler::deleteElement( $tData );
+								break;
+							default:
+								// Give 404 - not found
 								break;
 						}
 					break;
 					
 					case "Article" :
-						switch($tMethod) {
+						switch( $tMethod ) {
 							case "get" :
-								ArticleHandler::getElement($tData);
+								$tResource = ArticleHandler::getElement( $tData );
+								if( $tResource == false ) {
+									// Give 204 - no content
+									header('HTTP/1.1 204 No Content');
+									exit;
+								}
+								else {
+									echo json_encode( $tResource->toArray() );
+									exit;
+								}
 								break;
 							case "post" :
-								ArticleHandler::postElement($tData);
+								ArticleHandler::postElement( $tData );
 								break;
 							case "put" :
-								ArticleHandler::putElement($tData);
+								ArticleHandler::putElement( $tData );
 								break;
 							case "delete" :
-								ArticleHandler::deleteElement($tData);
+								ArticleHandler::deleteElement( $tData );
+								break;
+							default:
+								// Give 404 - not found
 								break;
 						}
 					break;
@@ -81,6 +96,7 @@ class APIController {
 						TagHandler::getCollection();
 						break;
 				}
+
 			}
 		} else {
 			echo "Skriv t.ex. GET/Article/2 i adressfältet";

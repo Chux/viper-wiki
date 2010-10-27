@@ -1,6 +1,6 @@
 <?php
 
-interface iModel {
+interface IModel {
 
 	/*
 	** @return (String) A string containing the SQL-query to delete the row from the DB .. or (False) if not applicable
@@ -16,5 +16,10 @@ interface iModel {
 	** @return (String) A string containing the SQL-query to make changes on the row in the DB .. OR (False) if not applicable
 	*/
 	public function getUpdateSQL();
+
+	/*
+	**
+	*/
+	public function toArray();
 
 }
