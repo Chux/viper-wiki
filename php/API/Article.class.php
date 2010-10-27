@@ -14,7 +14,7 @@ class Article implements IModel {
 
 
 	public function __construct( $pId, $pUserId, $pType, $pTitle, $pContent, $pDatetime ) {
-		$this->mId		= $pId;
+		$this->mId			= $pId;
 		$this->mUserId 		= $pUserId;
 		$this->mType 		= $pType;
 		$this->mTitle		= $pTitle;
