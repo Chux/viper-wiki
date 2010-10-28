@@ -92,9 +92,9 @@ function ApiConnection() {
 	function createUrl(object , id) {
 		var url;
 		if (id !=null){
-			url = APIROOT + PREFIX + object.getResourceType() + '/' + id + '/'; 
+			url = APIROOT +  object.getResourceType() + '/' + id + '/'; 
 		} else {
-			url = APIROOT + PREFIX + object.getResourceType() + '/';
+			url = APIROOT + object.getResourceType() + '/';
 		}
 		return url;
 	};
@@ -102,9 +102,9 @@ function ApiConnection() {
 	function createUrlFromResourceType(resourceType , id) {
 		var url;
 		if (id !=null){
-			url = APIROOT + PREFIX + resourceType + '/' + id + '/';
+			url = APIROOT +  resourceType + '/' + id + '/';
 		} else {
-			url = APIROOT + PREFIX  + resourceType + '/';
+			url = APIROOT +  resourceType + '/';
 		}
 		return url;
 	};

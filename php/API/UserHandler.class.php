@@ -56,7 +56,7 @@ class UserHandler implements IResourceHandler {
 	}
 
 
-	public function putCollcetion() { }
+	public function putCollection() { }
 	public function postCollection() { }
 	public function deleteCollection() { }
 

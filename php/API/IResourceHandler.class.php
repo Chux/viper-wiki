@@ -33,7 +33,7 @@ interface IResourceHandler {
 	/*
 	** "Replace the entire collection with another collection." - WikiPedia 26oct2010
 	*/
-	public function putCollcetion();
+	public function putCollection();
 
 	/*
 	** "Create a new entry in the collection. The new entry's URL is assigned automatically and is usually returned by the operation." - WikiPedia 26oct2010
