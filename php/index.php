@@ -5,12 +5,12 @@
 		<meta charset="UTF-8">
 		<title>Artikelnamn | Viper Wiki instans</title>
 		<link rel="stylesheet" type="text/css" href="layout.css">
-		<script type="application/javascript" src="js/setup.js" ></script>
-		<script type="application/javascript" src="js/lib/jquery-1.4.3.min.js" ></script>
-		<script type="application/javascript" src="js/Model.js" ></script>
-		<script type="application/javascript" src="js/ArticleModel.js" ></script>
-		<script type="application/javascript" src="js/ApiConnection.js" ></script>
-		<script type="application/javascript" src="js/ajaxtest.js" ></script>
+		<script type="text/javascript" src="js/setup.js" ></script>
+		<script type="text/javascript" src="js/lib/jquery-1.4.3.min.js" ></script>
+		<script type="text/javascript" src="js/Model.js" ></script>
+		<script type="text/javascript" src="js/ArticleModel.js" ></script>
+		<script type="text/javascript" src="js/ApiConnection.js" ></script>
+		<script type="text/javascript" src="js/api.js" ></script>
 		
 	</head>
 	<body>
