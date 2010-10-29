@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="js/ApiConnection.js" ></script>
 		<script type="text/javascript" src="js/UserModel.js" ></script>
 		<script type="text/javascript" src="js/AuthModel.js" ></script>
-		<script type="text/javascript" src="js/ajaxtest.js" ></script>
+		<script type="text/javascript" src="js/api.js" ></script>
 	</head>
 	<body>
 		<header>
