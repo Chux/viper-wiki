@@ -2,3 +2,12 @@
 .buildpath
 .DS_Store
 .project
+/java/.settings
+/java/.classpath
+/java/.project
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.class
