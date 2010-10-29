@@ -15,9 +15,9 @@ function start(){
 	var article = ac.get('Article', 1);
 	if (ac.getStatus() != '200' ){
 		handleError(ac.getStatus(),ac.getStatusText());
+		console.log(window.defaultStatus);	
 		return "";
 	} else if (article != null){
-		console.log(window.defaultStatus);	
 		return articleDisplay(article);
 	}
 	return ""
