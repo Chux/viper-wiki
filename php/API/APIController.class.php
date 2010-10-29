@@ -16,7 +16,7 @@ class APIController {
 		$tURLArray 		= Array();
 		$tURLArray 		= explode ( "/", $this->mURL );
 		$tMethod 		= strtolower( $_SERVER['REQUEST_METHOD'] );
-		$tHandlerName 		= $tURLArray[0];
+		$tHandlerName 		= strtolower( $tURLArray[0] );
 		if( isset( $tURLArray[1] ) ) {
 			$tData = $tURLArray[1];
 		}
@@ -25,7 +25,7 @@ class APIController {
 			// if not empty send to getElement else send to getCollection
 			if ( isset( $tData ) ) {
 				switch( $tHandlerName ) {
-					case "User" :
+					case "user" :
 						switch( $tMethod ) {
 							case "get" :
 								$tResource = UserHandler::getElement( $tData );
@@ -53,7 +53,7 @@ class APIController {
 						}
 					break;
 					
-					case "Article" :
+					case "article" :
 						switch( $tMethod ) {
 							case "get" :
 								$tResource = ArticleHandler::getElement( $tData );
@@ -87,7 +87,7 @@ class APIController {
 						}
 					break;
 				
-					case "Tag" :
+					case "tag" :
 						// TagHandler::getElement($tData);
 						// break;
 				}
@@ -96,7 +96,7 @@ class APIController {
 				switch( $tMethod ) {
 					case "get" :	
 						switch($tHandlerName) {
-							case "User" :
+							case "user" :
 								$tResource = UserHandler::getCollection();
 								if( $tResource == false ) {
 									header('HTTP/1.1 204 No users found');
@@ -107,7 +107,7 @@ class APIController {
 									exit;
 								}	
 							  	break;
-					  		case "Article" :
+					  		case "article" :
 								$tResource = ArticleHandler::getCollection();
 								if( $tResource == false ) {
 									header('HTTP/1.1 204 No articles found');
@@ -118,22 +118,22 @@ class APIController {
 									exit;
 								}
 								break;
-							case "Auth" :
+							case "auth" :
 								$tAuthentication = new AuthenticationHandler();
 								echo json_encode( $tAuthentication->getElement( null ) );
 								exit;
 								break;
-						  	case "Tag" :
+						  	case "tag" :
 								TagHandler::getCollection();
 								break;
 						}
 					case "post" :	
 						switch($tHandlerName) {
-							case "User" :
+							case "user" :
 							  	break;
-					  		case "Article" :
+					  		case "article" :
 								break;
-							case "Auth" :
+							case "auth" :
 								$tAuthentication = new AuthenticationHandler();
 								if ( $tAuthentication->postElement( $_POST ) ) {
 									header('HTTP/1.1 200 Authentication OK');
@@ -143,7 +143,7 @@ class APIController {
 								}
 								exit;
 								break;
-						  	case "Tag" :
+						  	case "tag" :
 								break;
 						}
 				}
