@@ -1,6 +1,5 @@
 package viper.entities;
 
-import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -14,37 +13,26 @@ public class ArticleDAO extends HibernateDAO{
 	public String getClassNameOfDAOResource() {
 		return Article.class.getName();
 	}
-/*
+
 	
 	@SuppressWarnings("unchecked")
-	public static List<Article> getAllArticles() {
+	public static Article getArticleByTitle( String artTitle) {
 		
 		Session hibernateSession = HibernateUtil.getSession();
 		
 		hibernateSession.beginTransaction();
-		List<Article> articles = (List<Article>) hibernateSession.load(Article.class, 0 );
-		//Query query = hibernateSession.createQuery("from viper.entities.Article");
+		
+		Query query = hibernateSession.createQuery("from Article article where article.title = :artTitle");
+		
+		query.setString("artTitle", artTitle);
 		
 		hibernateSession.getTransaction().commit();
 		
-	//	List<Article> articles = query.list();
+		Article article = (Article) query.list();
 		
-		return articles;
+		return article;
 		
 	}
 	
-	public static void saveArticle(Article a) {
-		
-		Session hibernateSession = HibernateUtil.getSession();
-		
-		hibernateSession.beginTransaction();
-		
-		hibernateSession.save(a);
-			
-		hibernateSession.getTransaction().commit();
-		
-	}*/
 
-
-	
 }
