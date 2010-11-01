@@ -37,7 +37,6 @@ public abstract class HibernateDAO {
 	public List<ResourceElement> getCollection(){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
-
 		Query query = herbSession.createQuery("from " + this.getClassNameOfDAOResource());
 		
 		herbSession.getTransaction().commit();

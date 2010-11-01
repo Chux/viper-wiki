@@ -10,6 +10,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ApiServlet</servlet-name>
-    <url-pattern>/ApiServlet</url-pattern>
+    <url-pattern>/API/*</url-pattern>
   </servlet-mapping>
 </web-app>
