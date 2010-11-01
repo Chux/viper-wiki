@@ -31,8 +31,12 @@ public class ApiServlet extends HttpServlet {
 	}
 
 	public void init(ServletContext servletContext) {
+<<<<<<< HEAD
+		File configfile = new File(servletContext.getRealPath("WEB-INF/hibernate/hibernate.cfg.xml"));
+=======
 		File configfile = new File(servletContext
 				.getRealPath("/WEB-INF/hibernate/hibernate.cfg.xml"));
+>>>>>>> d6b34371e9e304a9aa1c245bc57a06d082c595ec
 		viper.db.HibernateUtil.initHibernate(configfile);
 	}
 
