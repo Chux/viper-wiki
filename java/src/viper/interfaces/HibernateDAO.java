@@ -11,7 +11,7 @@ import viper.entities.User;
 public abstract class HibernateDAO {
 	
 	/**
-	 * Implement this for connection with a resource element.
+	 * Implement this for connection with a resource.
 	 * Standard implementation is : return [Resource].class.getName() 
 	 */
 	public abstract String getClassNameOfDAOResource();
@@ -21,10 +21,10 @@ public abstract class HibernateDAO {
 	 * @param id resource id
 	 * @return instance of resource id
 	 */
-	public ResourceElement getElement(int id){
+	public ResourceElement getElement( int id ){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
-		ResourceElement  element= (ResourceElement) herbSession.load(this.getClassNameOfDAOResource(), id);
+		ResourceElement  element= ( ResourceElement ) herbSession.load( this.getClassNameOfDAOResource(), id );
 		herbSession.getTransaction().commit();
 		return element;
 	}
@@ -38,7 +38,7 @@ public abstract class HibernateDAO {
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
 
-		Query query = herbSession.createQuery("from " + this.getClassNameOfDAOResource());
+		Query query = herbSession.createQuery("from " + this.getClassNameOfDAOResource()); 
 		
 		herbSession.getTransaction().commit();
 		List<ResourceElement> collection =query.list();
@@ -49,14 +49,19 @@ public abstract class HibernateDAO {
 	 * Update a Resourse in the db 
 	 * @param element instance 
 	 */
-	public static void updateElement(ResourceElement element){
+	public static void updateElement( ResourceElement element ){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
-		herbSession.save(element);
+		herbSession.save( element );
 		herbSession.getTransaction().commit();
 	}
 	
-	public static void updateCollection(List<ResourceElement> collection){
+	public static void updateCollection( List<ResourceElement> collection ){
+		Session herbSession = HibernateUtil.getSession();
+		herbSession.beginTransaction();
+		herbSession.save( collection );
+		herbSession.getTransaction().commit();
+		
 		
 	}
 	
@@ -64,23 +69,27 @@ public abstract class HibernateDAO {
 	 * Update a Resourse in the db 
 	 * @param element instance 
 	 */
-	public static void createElement(ResourceElement element){
-		updateElement(element);
+	public static void createElement( ResourceElement element ){
+		updateElement( element );
 	}
 	
-	/**
-	 * Update a Collection of Resourse in the db 
-	 * @param element instance 
-	 */	
-	public static void createCollection(List<ResourceElement> collection){
-		createCollection(collection);
-	}
-	
-	public static void deleteElement(ResourceElement element){
+	public static void createCollection( List<ResourceElement> collection ){
+		updateCollection( collection );
 		
 	}
 	
-	public static void deleteCollection(List<ResourceElement> collection){
+	public static void deleteElement( ResourceElement element ){
+		Session herbSession = HibernateUtil.getSession();
+		herbSession.beginTransaction();
+		herbSession.delete( element );
+		herbSession.getTransaction().commit();
+	}
+	
+	public static void deleteCollection( List<ResourceElement> collection ){
+		Session herbSession = HibernateUtil.getSession();
+		herbSession.beginTransaction();
+		herbSession.delete( collection );
+		herbSession.getTransaction().commit();
 		
 	}
 	
