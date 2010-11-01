@@ -28,8 +28,8 @@ public class MainTest {
 		Article article2 = new Article();
 		UserDAO userDAO = new UserDAO();
 		System.out.println(userDAO.getClassNameOfDAOResource());
-		article2.setTitle("olle");
-		article2.setContent("Stortån gör inte ont");
+		article2.setTitle("Tim");
+		article2.setContent("jag g√§r det jag kan");
 		hibernateSession.save(article2);
 		System.out.println(article.getContent());
 		//Queryquery = hibernateSession.createQuery("from viper.entities.Article");

@@ -11,7 +11,7 @@ import viper.entities.User;
 public abstract class HibernateDAO {
 	
 	/**
-	 * Implement this for connection with a resource.
+	 * Implement this for connection with a resource element.
 	 * Standard implementation is : return [Resource].class.getName() 
 	 */
 	public abstract String getClassNameOfDAOResource();
@@ -68,8 +68,12 @@ public abstract class HibernateDAO {
 		updateElement(element);
 	}
 	
+	/**
+	 * Update a Collection of Resourse in the db 
+	 * @param element instance 
+	 */	
 	public static void createCollection(List<ResourceElement> collection){
-		
+		createCollection(collection);
 	}
 	
 	public static void deleteElement(ResourceElement element){
