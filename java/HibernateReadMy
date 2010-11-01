@@ -1,0 +1,5 @@
+1. Gå till din phpmyadmin och ta  bort alla kolumner i article tabellen (de kommer att skapas automatiskt) 
+2. Gå in i Eclips och kör MainTest en gång.
+3. Gå in i databasen och skriv en ny post med id 1
+4. Kör main igen och kolla i consolloggen att det du skrev i article body dyker upp dyker upp.
+5. Kolla i db om en ny post har kommit in 

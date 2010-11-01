@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	
+       <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="hibernate.hbm2ddl.auto">update</property><!-- updatera eller rätta (om fel). Tar aldrig bort. Kan skapa nya kolumner -->
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+		<property name="hibernate.connection.characterEncoding">utf-8</property>
+		
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLMyISAMDialect</property>
+        <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+        <!--  vad är det för typ av db vi kopplar upp oss mot -->
+
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/viper_wiki</property>
+        <property name="hibernate.connection.password">wiki</property>
+        <property name="hibernate.connection.username">viper</property>
+
+        <property name="hibernate.default_schema">viper_wiki</property>
+    </session-factory>
+</hibernate-configuration>
