@@ -5,9 +5,17 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import viper.db.HibernateUtil;
+import viper.interfaces.HibernateDAO;
+import viper.interfaces.ResourceElement;
 
-public class ArticleDAO {
+public class ArticleDAO extends HibernateDAO{
 
+	@Override
+	public String getClassNameOfDAOResource() {
+		return ResourceElement.class.getName();
+	}
+/*
+	
 	@SuppressWarnings("unchecked")
 	public static List<Article> getAllArticles() {
 		
@@ -35,7 +43,8 @@ public class ArticleDAO {
 			
 		hibernateSession.getTransaction().commit();
 		
-	}
+	}*/
+
 
 	
 }
