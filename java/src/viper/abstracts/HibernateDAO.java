@@ -1,6 +1,7 @@
 package viper.abstracts;
 
 import java.util.List;
+import java.util.Map;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -92,5 +93,6 @@ public abstract class HibernateDAO {
 		herbSession.getTransaction().commit();
 		
 	}
-	
+
+	public abstract ResourceElement createElement(Map<String,String[]> parameterMap);	
 }
