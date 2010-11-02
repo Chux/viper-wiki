@@ -11,7 +11,7 @@ public class ArticleDAO extends HibernateDAO{
 
 	@Override
 	public String getClassNameOfDAOResource() {
-		return ResourceElement.class.getName();
+		return Article.class.getName();
 	}
 
 	

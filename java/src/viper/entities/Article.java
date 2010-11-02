@@ -10,8 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import viper.interfaces.ResourceElement;
+
 @Entity(name="articles")
-public class Article implements Serializable {
+public class Article implements Serializable, ResourceElement {
 
 	private static final long serialVersionUID = 4601312214768336909L;
 	
@@ -51,6 +53,13 @@ public class Article implements Serializable {
 	}
 	public void setDatetime(Date datetime) {
 		this.datetime = datetime;
+	}
+	public String toJsonString() {
+		
+		
+		
+		String json = "{}";
+		return json;
 	}
 	
 }
