@@ -4,8 +4,8 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import viper.db.HibernateUtil;
-import viper.interfaces.HibernateDAO;
-import viper.interfaces.ResourceElement;
+import viper.abstracts.HibernateDAO;
+import viper.abstracts.ResourceElement;
 
 public class ArticleDAO extends HibernateDAO{
 

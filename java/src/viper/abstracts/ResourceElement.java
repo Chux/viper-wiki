@@ -1,4 +1,4 @@
-package viper.interfaces;
+package viper.abstracts;
 
 public interface ResourceElement {
 	

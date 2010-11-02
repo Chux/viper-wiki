@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import viper.interfaces.ResourceElement;
+import viper.abstracts.ResourceElement;
 
 @Entity(name="articles")
 public class Article implements Serializable, ResourceElement {

@@ -1,4 +1,4 @@
-package viper.interfaces;
+package viper.abstracts;
 
 import java.util.List;
 
@@ -37,12 +37,8 @@ public abstract class HibernateDAO {
 	public List<ResourceElement> getCollection(){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
-<<<<<<< HEAD
-		Query query = herbSession.createQuery("from " + this.getClassNameOfDAOResource());
-=======
 
 		Query query = herbSession.createQuery("from " + this.getClassNameOfDAOResource()); 
->>>>>>> 3680afc48fb292b08582a9bd8d6ece9e94708232
 		
 		herbSession.getTransaction().commit();
 		List<ResourceElement> collection =query.list();
