@@ -1,4 +1,4 @@
-package viper.interfaces;
+package viper.abstracts;
 
 import java.io.IOException;
 import java.lang.instrument.IllegalClassFormatException;

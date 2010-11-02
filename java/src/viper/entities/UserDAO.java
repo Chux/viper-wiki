@@ -1,6 +1,6 @@
 package viper.entities;
 
-import viper.interfaces.HibernateDAO;
+import viper.abstracts.HibernateDAO;
 
 public class UserDAO extends HibernateDAO {
 

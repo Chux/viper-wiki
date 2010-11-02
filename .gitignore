@@ -3,8 +3,11 @@
 .DS_Store
 .project
 /java/.settings
+java/.settings
 /java/.classpath
+java/.classpath
 /java/.project
+java/.project
 *~
 *.lock
 *.DS_Store
