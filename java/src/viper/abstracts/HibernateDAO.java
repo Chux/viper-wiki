@@ -1,5 +1,7 @@
 package viper.abstracts;
 
+import java.io.IOException;
+import java.lang.instrument.IllegalClassFormatException;
 import java.util.List;
 import java.util.Map;
 
@@ -50,14 +52,14 @@ public abstract class HibernateDAO {
 	 * Update a Resourse in the db 
 	 * @param element instance 
 	 */
-	public static void updateElement( ResourceElement element ){
+	public void updateElement( ResourceElement element ){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
 		herbSession.save( element );
 		herbSession.getTransaction().commit();
 	}
 	
-	public static void updateCollection( List<ResourceElement> collection ){
+	public void updateCollection( List<ResourceElement> collection ){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
 		herbSession.save( collection );
@@ -70,23 +72,23 @@ public abstract class HibernateDAO {
 	 * Update a Resourse in the db 
 	 * @param element instance 
 	 */
-	public static void createElement( ResourceElement element ){
+	public void createElement( ResourceElement element ){
 		updateElement( element );
 	}
 	
-	public static void createCollection( List<ResourceElement> collection ){
+	public void createCollection( List<ResourceElement> collection ){
 		updateCollection( collection );
 		
 	}
 	
-	public static void deleteElement( ResourceElement element ){
+	public void deleteElement( ResourceElement element ) throws IllegalClassFormatException {
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
 		herbSession.delete( element );
 		herbSession.getTransaction().commit();
 	}
 	
-	public static void deleteCollection( List<ResourceElement> collection ){
+	public void deleteCollection( List<ResourceElement> collection ){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
 		herbSession.delete( collection );
