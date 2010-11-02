@@ -52,6 +52,50 @@ public class ApiServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		init(this.getServletContext());
 
+		String[] uriArray = splitUri(request.getRequestURI());
+		if (uriArray[2].equals("API")) {
+			if (uriMapResource.containsKey(uriArray[3])) {
+				HibernateDAO resourceDAO = uriMapResource.get(uriArray[3]);
+
+				if (uriArray.length > 4) {
+					try {
+						ResourceElement resource = resourceDAO
+								.getElement(Integer.parseInt(uriArray[4]));
+						response.setStatus(response.SC_OK);
+						response.getWriter().print(resource.toJsonString());
+					} catch (Exception e) {
+						response.setStatus(response.SC_NOT_FOUND);
+						response.getWriter().print("");
+					}
+				} else {
+					try {
+						List<ResourceElement> resourceCollection = resourceDAO
+								.getCollection();
+						String json = "	";
+						for (int i = 0; i < resourceCollection.size(); i++) {
+							if (i == 0) {
+								json += resourceCollection.get(i)
+										.toJsonString();
+							} else {
+								json += ","
+										+ resourceCollection.get(i)
+												.toJsonString();
+							}
+						}
+						json += "]";
+						response.setStatus(HttpServletResponse.SC_OK);
+						response.getWriter().print(json);
+					} catch (Exception e) {
+						response.setStatus(response.SC_NOT_FOUND);
+						response.getWriter().print("");
+					}
+				}
+			} else {
+				response.setStatus(response.SC_NOT_FOUND);
+				response.getWriter().print("");
+			}
+		}
+
 	}
 
 	/**
