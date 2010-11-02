@@ -1,6 +1,6 @@
 package viper.entities;
 
-import viper.interfaces.ResourceElement;
+import viper.abstracts.ResourceElement;
 
 public class User implements ResourceElement{
 
