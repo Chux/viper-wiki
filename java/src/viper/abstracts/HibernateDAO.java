@@ -26,7 +26,7 @@ public abstract class HibernateDAO {
 	public ResourceElement getElement( int id ){
 		Session herbSession = HibernateUtil.getSession();
 		herbSession.beginTransaction();
-		ResourceElement  element= ( ResourceElement ) herbSession.load( this.getClassNameOfDAOResource(), id );
+		ResourceElement element = ( ResourceElement ) herbSession.load( this.getClassNameOfDAOResource(), id );
 		herbSession.getTransaction().commit();
 		return element;
 	}

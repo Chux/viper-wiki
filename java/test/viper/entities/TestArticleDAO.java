@@ -3,36 +3,39 @@ package viper.entities;
 import static org.junit.Assert.*;
 
 import java.io.File;
-import java.util.List;
 
-import org.junit.After;
-import org.junit.Before;
+import org.hibernate.Session;
 import org.junit.Test;
+
+import viper.db.HibernateUtil;
 
 public class TestArticleDAO {
 
-	@Before
-	public void setUp() throws Exception {
-		File configfile = new File("/Users/ollesvensson/Programering/PortningsKurs2/viper-wiki/java/WebContent/WEB-INF/hibernate/hibernate.cfg.xml");
-		viper.db.HibernateUtil.initHibernate(configfile);
-
+	@Test
+	public void GetElement() {
+		
+		File configfile = new File("WebContent/WEB-INF/hibernate/hibernate.cfg.xml");
+		viper.db.HibernateUtil.initHibernate( configfile );
+		
+		ArticleDAO aDAO = new ArticleDAO();
+		Article art = (Article) aDAO.getElement( 1 );
+		assertTrue( art.getId() == 1 );
+		
 	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
-	/*@Test
-	/*public void testGetAllArticles() {
-		ArticleDAO ad = new ArticleDAO();
-		Article article = new Article();
-		article.setContent("olle");
-		assertEquals("olle", article.getContent());
-		//ArticleDAO.saveArticle(article); 
-		List<Article> articles = ArticleDAO.getAllArticles();
-		assertEquals("olle", articles.get(0).getContent());
-	}*/
-
-
+	
+	@Test
+	public void GetElementByTitle() {
+		
+		File configfile = new File("WebContent/WEB-INF/hibernate/hibernate.cfg.xml");
+		viper.db.HibernateUtil.initHibernate( configfile );
+		
+		ArticleDAO aDAO = new ArticleDAO();
+		
+		Article art = (Article) aDAO.getElementByTitle("apa");
+		
+		System.out.println(art.getId());
+		
+		
+	}	
 
 }
