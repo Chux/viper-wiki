@@ -11,8 +11,8 @@ import org.junit.Test;
 
 import viper.db.HibernateUtil;
 import viper.entities.Article;
-import viper.interfaces.HibernateDAO;
-import viper.interfaces.ResourceElement;
+import viper.abstracts.HibernateDAO;
+import viper.abstracts.ResourceElement;
 
 
 public class TestHibernateDAO {

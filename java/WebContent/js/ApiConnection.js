@@ -35,6 +35,7 @@ function ApiConnection() {
 			url : createUrl(object, id),
 			type : 'post',
 			dataType : 'json',
+			data: object,
 			async: false,
 			complete : function (transport, textstatus) {
 				object=transport.responseText;

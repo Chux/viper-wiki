@@ -5,7 +5,7 @@ $(document).ready( function() {
 	tUser = new UserModel();
 	tAuth = new AuthModel();
 	eventHandler( tApiConnection, tAuth );
-	var tArticle = tApiConnection.get( 'Article', 1 );
+	tArticle = tApiConnection.get( 'article', 1 );
 
 	if ( tApiConnection.getStatus() != '200' ) {
 		handleError( tApiConnection.getStatus(), tApiConnection.getStatusText() );
@@ -20,14 +20,16 @@ function eventHandler( pApiConnection, pAuth ) {
 
 	//form submits
 	$("#article #articleForm").live( 'submit', function() {
-
+		var tArticle = new ArticleModel();
 		tArticle.title = $(this).find( '#title' ).attr( 'value' );
 		tArticle.content = $(this).find( '#content' ).attr( 'value' );
 		if ( tArticle.id ) {
 			pApiConnection.create( tArticle );	//should be update
+		} else {
+			pApiConnection.create( tArticle );	
 		}
 		$('#article').html( articleDisplay( tArticle ) );
-
+		
 		return false;
 
 	});
@@ -35,7 +37,7 @@ function eventHandler( pApiConnection, pAuth ) {
 	$("header #search").live( 'submit', function() {
 
 		tSearchQuery = $(this).find( '#search_text' ).attr( 'value' );
-		tArticle= pApiConnection.get( 'Article/' + tSearchQuery );
+		tArticle= pApiConnection.get( 'article/' + tSearchQuery );
 		if( tArticle) {
 			$("#article").html( articleDisplay( tArticle ) );
 		} else {
@@ -54,7 +56,7 @@ function eventHandler( pApiConnection, pAuth ) {
 			mLoggedIn = true; // ... This is not good.. Let ApiConnection take care of this member in the future..
 		}
 			
-		if ( result ) {
+		if ( tResult ) {
 			$('#article').html( displaySearchResults( tResult ) );
 		} else {
 			$('#article').html( '<a href="" id="create" rel="">Create this article </a>' );
@@ -66,7 +68,7 @@ function eventHandler( pApiConnection, pAuth ) {
 	$('#update').live( 'click', function(){
 
 		var tId = $(this).attr('rel');
-		tArticle = pApiConnection.get( 'Article' , tId );		
+		tArticle = pApiConnection.get( 'article' , tId );		
 		$('#article').html( articleForm( tArticle ) );
 		return false;	
 
@@ -82,7 +84,7 @@ function eventHandler( pApiConnection, pAuth ) {
 	$('.get, article#article div#content a').live( 'click', function() {
 
 		var tId = $(this).attr( 'href' );
-		tArticle = pApiConnection.get( 'Article' , tId );
+		tArticle = pApiConnection.get( 'article' , tId );
 		$('#article').html( articleDisplay( tArticle ) );
 		return false;	
 

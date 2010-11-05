@@ -22,6 +22,8 @@ public class TestArticleDAO {
 		assertTrue( art.getId() == 1 );
 		
 	}
+<<<<<<< HEAD
+=======
 	
 	@Test
 	public void GetElementByTitle() {
@@ -37,5 +39,6 @@ public class TestArticleDAO {
 		
 		
 	}	
+>>>>>>> 138851556e587f4bc7926d7b5d63ea31e6314c65
 
 }

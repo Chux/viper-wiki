@@ -54,11 +54,11 @@ public class Article implements Serializable, ResourceElement {
 	public void setDatetime(Date datetime) {
 		this.datetime = datetime;
 	}
+	
 	public String toJsonString() {
+		String json;
+		json +=  
 		
-		
-		
-		String json = "{}";
 		return json;
 	}
 	
