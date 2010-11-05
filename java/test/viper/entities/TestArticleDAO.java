@@ -22,17 +22,4 @@ public class TestArticleDAO {
 	public void tearDown() throws Exception {
 	}
 
-	/*@Test
-	/*public void testGetAllArticles() {
-		ArticleDAO ad = new ArticleDAO();
-		Article article = new Article();
-		article.setContent("olle");
-		assertEquals("olle", article.getContent());
-		//ArticleDAO.saveArticle(article); 
-		List<Article> articles = ArticleDAO.getAllArticles();
-		assertEquals("olle", articles.get(0).getContent());
-	}*/
-
-
-
 }
