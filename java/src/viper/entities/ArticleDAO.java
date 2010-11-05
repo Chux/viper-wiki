@@ -1,5 +1,8 @@
 package viper.entities;
 
+import java.util.Date;
+import java.util.Map;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -32,6 +35,23 @@ public class ArticleDAO extends HibernateDAO{
 		
 		return article;
 		
+	}
+
+
+	@Override
+	public ResourceElement createElement(Map<String,String[]> parameterMap) {
+		Article article = null;
+		if (parameterMap.containsKey("title") && parameterMap.containsKey("content")) {
+			article = new Article();
+			article.setTitle(parameterMap.get("title")[0]);
+			article.setContent(parameterMap.get("content")[0]);
+			Date datetime = new Date();
+			article.setDatetime(datetime);
+			this.createElement(article);
+		} 	
+		
+		
+		return article;
 	}
 	
 
