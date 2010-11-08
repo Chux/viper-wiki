@@ -1,10 +1,12 @@
 package viper.entities;
 
+<<<<<<< HEAD
 import java.util.Date;
 import java.util.Map;
-
+=======
 import java.util.Iterator;
 import java.util.List;
+>>>>>>> 138851556e587f4bc7926d7b5d63ea31e6314c65
 
 import org.hibernate.Query;
 import org.hibernate.Session;

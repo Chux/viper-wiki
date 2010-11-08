@@ -2,13 +2,18 @@
 <html>
 <head>
   <title>Viper</title>
-  <%= stylesheet_link_tag :all %>
+	<%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+	
+<header>
+	<%= image_tag "logo.png"%>
+</header>
+
+	<%= yield %>
 
 </body>
 </html>
