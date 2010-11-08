@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<h1><%= @article.title %> </h1>
 <article>
+	<p id="notice"><%= notice %></p>
+	<h1><%= deUrlizeTitle( @article.title ) %> </h1>
 
-<p>
-  <%= wikiToHtml( @article.content ) %>
-</p>
+	<p>
+		<%= raw wikiToHtml( @article.content ) %>
+	</p>
 
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+	<%= link_to 'Edit', edit_article_path(@article) %> |
+	<%= link_to 'Back', articles_path %>
 </article>

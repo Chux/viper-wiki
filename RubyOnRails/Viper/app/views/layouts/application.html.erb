@@ -9,9 +9,20 @@
 
 <body>
 	
-<header>
-	<%= image_tag "logo.png"%>
-</header>
+	<header>
+		<a href="#" title="Home">
+			<%= image_tag("logo.png", :id=> "logo") %>
+		</a>
+		<menu>
+			<li><a href="#">Menyval1</a></li>
+			<li><a href="#">Menyval2</a></li>
+			<li><a href="#">Menyval3</a></li>
+		</menu>
+		<form id="search" method="post">
+			<input type="text" name="search_text" id="search_text">
+			<input type="submit" name="search_submit" id="search_submit" value="Seach">
+		</form>
+	</header>
 
 	<%= yield %>
 
