@@ -3,8 +3,9 @@
 <h1><%= @article.title %> </h1>
 <article>
 
-<p>
-  <%= wikiToHtml( @article.content ) %>
+<p> 
+  
+  <%= raw(wikiToHtml( @article.content )) %>
 </p>
 
 
