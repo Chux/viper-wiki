@@ -1,8 +1,9 @@
+include ArticlesHelper
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
   def index
-    @article = Article.find_by_title("start")
+    @article = Article.find_by_title(deUrlizeTitle( "start" ))
 
     respond_to do |format|
 			if @article != nil 
@@ -20,7 +21,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.xml
   def show
-    @article = Article.find_by_title(params[:id])
+    @article = Article.find_by_title(deUrlizeTitle(params[:id]))
 
     respond_to do |format|
 			if @article != nil 
@@ -48,7 +49,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @article = Article.find(params[:id])
+#    @article = Article.find(params[:id])
+      @article = Article.find_by_title(deUrlizeTitle(params[:id]))
+
   end
 
   # POST /articles
@@ -70,7 +73,8 @@ class ArticlesController < ApplicationController
   # PUT /articles/1
   # PUT /articles/1.xml
   def update
-    @article = Article.find(params[:id])
+#    @article = Article.find(params[:id])
+    @article = Article.find_by_title(deUrlizeTitle(params[:id]))
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
@@ -86,7 +90,8 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.xml
   def destroy
-    @article = Article.find(params[:id])
+ #   @article = Article.find(params[:id])
+    @article = Article.find_by_title(deUrlizeTitle(params[:id]))
     @article.destroy
 
     respond_to do |format|
