@@ -25,12 +25,12 @@ def wikiToHtml ( inputString )
 end
 
 def urlizeTitle ( s )
-	s = s.gsub(' ','-')       
+	s = s.gsub(/ /,'-')       
 	return s
 end
 
 def deUrlizeTitle ( s )
-	 s = s.gsub('-',' ')       
+	 s = s.gsub(/-/,' ')       
 	 return s
  end
 
