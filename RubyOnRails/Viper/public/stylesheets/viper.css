@@ -136,6 +136,26 @@ article>header>menu li {
 	padding: 5px 10px;
 }
 
+ol.searchresult {
+	padding: 1em 2em;
+	margin: 0;
+	list-style: none;
+}
+
+ol.searchresult li {
+	border-bottom: 1px #85A34B dashed;
+	padding-bottom: 1em;
+}
+
+ol.searchresult li:last-child {
+	border-bottom: 0;
+	padding-bottom: 2em;
+}
+
+ol.searchresult li>* {
+	margin-left: 2em;
+}
+
 footer {
 	margin: 0 auto;
 	width: 80%;
