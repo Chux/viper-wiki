@@ -1,4 +1,4 @@
-include ArticlesHelper
+include ApplicationHelper
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
