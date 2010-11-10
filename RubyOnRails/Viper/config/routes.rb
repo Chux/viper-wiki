@@ -1,5 +1,8 @@
 Viper::Application.routes.draw do
-  resources :articles
+  match "/search/:id", :to => redirect("/articles/")
+  match "/search/:id/new", :to => redirect("/articles/")
+  match "/search/:id/edit", :to => redirect("/articles/")
+  resources :articles, :search
 
 	root :to => 'articles#index'
 

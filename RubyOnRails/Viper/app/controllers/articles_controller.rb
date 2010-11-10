@@ -99,4 +99,10 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def search
+    @articles = Article.search(params[:search])
+    return @articles
+  end
+  
 end
