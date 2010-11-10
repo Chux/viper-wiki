@@ -1,4 +1,6 @@
 Viper::Application.routes.draw do
+  devise_for :users, :path_names => { :sign_up => "register"}
+
   resources :articles
 
 	root :to => 'articles#index'
