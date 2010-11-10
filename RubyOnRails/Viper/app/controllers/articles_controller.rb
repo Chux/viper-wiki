@@ -1,4 +1,4 @@
-include ArticlesHelper
+include ApplicationHelper
 class ArticlesController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
   # GET /articles
@@ -100,4 +100,10 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def search
+    @articles = Article.search(params[:search])
+    return @articles
+  end
+  
 end

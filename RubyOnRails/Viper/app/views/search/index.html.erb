@@ -1,0 +1,16 @@
+<article>
+	<h1>Search result for "<%= @searchstring %>"</h1>
+	<p id="notice"><%= notice %></p>
+	<% if( @article.length > 0 ) %>
+		<ol class="searchresult"> 
+			<% @article.each do |article| %>
+				<li>
+					<a href="/articles/<%= article.title %>"><h2><%= article.title %></h2></a>
+					<p><%= raw wikiToHtml( article.content ) %> </p>
+				</li>
+			<% end %>
+		</ol>
+	<% else %>
+		<p>No articles found</p>
+	<% end %>
+</article>

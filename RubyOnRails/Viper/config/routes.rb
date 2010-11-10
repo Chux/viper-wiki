@@ -1,8 +1,13 @@
 Viper::Application.routes.draw do
+  
   devise_for :users, :path_names => { :sign_up => "register"}
 
   resources :articles
 
+  match "/search/:id", :to => redirect("/articles/")
+  match "/search/:id/new", :to => redirect("/articles/")
+  match "/search/:id/edit", :to => redirect("/articles/")
+ 
 	root :to => 'articles#index'
 
   # The priority is based upon order of creation:
