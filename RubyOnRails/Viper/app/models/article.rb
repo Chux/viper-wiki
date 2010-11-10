@@ -6,7 +6,10 @@ class Article < ActiveRecord::Base
   
   def self.search(search)
     search_condition = "%" + search + "%"
-    find(:all, :conditions => ['title LIKE ? OR content LIKE ?', search_condition, search_condition])
+    inTitle = find(:all,:conditions => ['title LIKE ?', search_condition])
+    inContent = find(:all,:conditions => ['content LIKE ?', search_condition])
+    all = inTitle + inContent
+    all.uniq
   end
   
 end
