@@ -18,10 +18,11 @@
 			<li><a href="#">Menyval2</a></li>
 			<li><a href="#">Menyval3</a></li>
 		</menu>
-		<form id="search" method="post">
+		<form id="search" method="get" action="/search/">
 			<input type="text" name="search_text" id="search_text">
-			<input type="submit" name="search_submit" id="search_submit" value="Seach">
+			<input type="submit" id="search_submit" value="Seach">
 		</form>
+		
 	</header>
 
 	<%= yield %>
