@@ -6,6 +6,9 @@ class SearchController < ApplicationController
       pro = ''
       post = ''
       matchIndex =  article.content.index(params[:search_text])
+      if matchIndex == nil 
+        matchIndex = 0
+      end
       if (matchIndex-displayChars/2 > 0)   
         from = matchIndex - displayChars/2 
         pro = '... '
@@ -21,6 +24,16 @@ class SearchController < ApplicationController
       displayChars = 200
       article.content = pro + article.content.slice(from,displayChars) + post
     end
-    @article = articles
-  end
+	  
+	  respond_to do |format|
+		  unless articles  
+			  @msg = "create this article? <a href='/article/new/#{ params[:search_text] }'"  
+		  else
+			  @article = articles
+			  @searchstring = params[:search_text]
+		  end
+ 		  format.html # index.html.erb
+		  format.xml { render :xml => @article }
+	  end
+	end
 end
